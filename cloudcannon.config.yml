@@ -1,0 +1,66 @@
+source: /
+base_url: /
+timezone: Europe/Ljubljana
+
+paths:
+  uploads: assets/uploads
+  static: /
+
+collection_groups:
+  - heading: Glavna vsebina
+    collections:
+      - page_data
+      - zapisi
+
+collections_config:
+  page_data:
+    path: content/pages
+    name: Strani
+    icon: wysiwyg
+    _enabled_editors:
+      - data
+    description: Strukturirana vsebina za glavne strani. Trenutno pripravljeno za /trema in /strenirkaj-nastop.
+  zapisi:
+    path: content/zapisi
+    name: Zapisi
+    icon: notes
+    _enabled_editors:
+      - content
+    description: SEO zapisi okoli treme, prakse, nastopa in prisotnosti.
+
+_inputs:
+  title:
+    type: text
+    label: Naslov
+  slug:
+    type: text
+    label: URL slug
+  status:
+    type: select
+    label: Status
+    options:
+      values:
+        - draft
+        - review
+        - published
+  meta_title:
+    type: text
+    label: SEO naslov
+  meta_description:
+    type: textarea
+    label: SEO opis
+  primary_keyword:
+    type: text
+    label: Glavna SEO ključna beseda
+  secondary_keywords:
+    type: array
+    label: Sekundarne ključne besede
+  body:
+    type: markdown
+    label: Vsebina
+  cta_label:
+    type: text
+    label: CTA besedilo
+  cta_url:
+    type: url
+    label: CTA povezava
