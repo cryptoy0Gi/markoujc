@@ -1,0 +1,103 @@
+{
+  "title": "sTRENIRkAJ NASTOP",
+  "slug": "strenirkaj-nastop",
+  "status": "published",
+  "priority": 2,
+  "role": "Glavna programska stran. Program za tremo skozi trening in prakso.",
+  "seo": {
+    "meta_title": "sTRENIRkAJ NASTOP - program za tremo skozi prakso",
+    "meta_description": "8-tedenski praktični program za ljudi, ki jih trema ustavi pred nastopom, predstavitvijo ali govorom.",
+    "primary_keyword": "program za tremo",
+    "secondary_keywords": [
+      "trema pred nastopom",
+      "trening javnega nastopanja",
+      "strah pred javnim nastopanjem",
+      "praksa nastopanja"
+    ]
+  },
+  "hero": {
+    "eyebrow": "sTRENIRkAJ NASTOP",
+    "headline": "Trema ne izgine. Lahko pa prideš do točke, ko te ne ustavi več.",
+    "intro": "8-tedenski praktični program za delo s tremo skozi telo, glas, pozornost in realne situacije.",
+    "cta_label": "Preveri, ali je program zate",
+    "cta_url": "/kontakt/"
+  },
+  "recognition": {
+    "headline": "Večina ljudi misli, da je problem v samozavesti. Ponavadi ni.",
+    "body": [
+      "Pod pritiskom telo in glas pogosto nista več usklajena.",
+      "Misli gredo naprej, dih zaostane, glas izgubi oporo, pozornost se zoži.",
+      "Tega se ne reši samo z nasveti. Potrebna je izkušnja."
+    ]
+  },
+  "difference": {
+    "headline": "To ni klasičen tečaj javnega nastopanja.",
+    "not": [
+      "ni motivacijski seminar",
+      "ni prezentacijski trening s slajdi",
+      "ni recept za samozavest",
+      "ni en trik za odpravo treme"
+    ],
+    "is": [
+      "gledališka praksa",
+      "improvizacija",
+      "klovnovske tehnike",
+      "delo s pozornostjo in prisotnostjo",
+      "ponavljanje realnih situacij"
+    ]
+  },
+  "structure": [
+    {
+      "weeks": "1-2",
+      "title": "Izpostavljanje",
+      "items": [
+        "vstop pred druge",
+        "osnovna prisotnost",
+        "srečanje z nelagodjem"
+      ]
+    },
+    {
+      "weeks": "3-4",
+      "title": "Zavedanje",
+      "items": [
+        "telesni odzivi",
+        "glas",
+        "pozornost"
+      ]
+    },
+    {
+      "weeks": "5-6",
+      "title": "Izraz",
+      "items": [
+        "jasen govor",
+        "čustveni razpon",
+        "avtentičnost"
+      ]
+    },
+    {
+      "weeks": "7-8",
+      "title": "Integracija",
+      "items": [
+        "realni scenariji",
+        "individualni feedback",
+        "ponovitev pod pritiskom"
+      ]
+    }
+  ],
+  "for_who": [
+    "ljudje s tremo",
+    "podjetniki in vodje",
+    "govorci in predavatelji",
+    "ustvarjalci in performerji",
+    "vsi, ki želijo bolj jasno stati pred drugimi"
+  ],
+  "reframe": {
+    "headline": "Cilj ni, da postaneš popoln govorec.",
+    "body": "Cilj je, da lahko ostaneš prisoten, tudi ko ti ni udobno."
+  },
+  "conversion": {
+    "headline": "Če ti je ta pristop blizu, lahko preveriš program.",
+    "cta_label": "Pošlji vprašanje o programu",
+    "cta_url": "/kontakt/"
+  }
+}
