@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Marku – Marko Ujc</title>
+  <!-- SEO META -->
+  <meta name="description" content="Marko Ujc je trener nastopanja, igralec, režiser in scenarist. Dela z ljudmi, ki morajo stati pred drugimi." />
+  <link rel="canonical" href="https://markoujc.com/o-marku/" />
+
+  <!-- FAVICON – temno ozadje, terracotta M -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b09'/><text y='.88em' font-size='68' font-family='Georgia,serif' fill='%23c4714a' font-style='italic' x='8'>M</text></svg>" />
+
+  <!-- OPEN GRAPH – prikaz ob deljenju na LinkedIn, WhatsApp itd. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="O Marku – Marko Ujc" />
+  <meta property="og:description" content="Marko Ujc je trener nastopanja, igralec, režiser in scenarist. Dela z ljudmi, ki morajo stati pred drugimi." />
+  <meta property="og:url" content="https://markoujc.com/o-marku/" />
+  <meta property="og:site_name" content="Marko Ujc" />
+  <meta property="og:locale" content="sl_SI" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="O Marku – Marko Ujc" />
+  <meta name="twitter:description" content="Marko Ujc je trener nastopanja, igralec, režiser in scenarist. Dela z ljudmi, ki morajo stati pred drugimi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0c0b09;
+      --bg2:       #111009;
+      --bg3:       #161410;
+      --cream:     #e8e0d0;
+      --cream-dim: #9e9488;
+      --cream-xs:  #5a554e;
+      --accent:    #c4714a;
+      --accent-lt: #d4895e;
+      --line:      rgba(232,224,208,.09);
+      --ff-disp:   'Cormorant Garamond', Georgia, serif;
+      --ff-body:   'Syne', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      opacity: .028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color .4s, background .4s, backdrop-filter .4s;
+    }
+    nav.scrolled {
+      border-color: var(--line);
+      background: rgba(12,11,9,.88);
+      backdrop-filter: blur(18px);
+    }
+    .nav-logo {
+      font-family: var(--ff-disp);
+      font-size: 1.2rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--cream); text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--cream-dim); text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
+      border: 1px solid rgba(196,113,74,.3);
+      padding: .55rem 1.5rem; border-radius: 2px;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      position: relative; z-index: 1;
+      padding: 8rem 3.5rem 0;
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .breadcrumb a {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream-xs); text-decoration: none; transition: color .2s;
+    }
+    .breadcrumb a:hover { color: var(--cream-dim); }
+    .breadcrumb-sep { color: var(--cream-xs); font-size: .62rem; }
+    .breadcrumb-current {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; z-index: 1;
+      min-height: 92svh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 4rem 3.5rem 0;
+      overflow: hidden;
+    }
+    .hero-bg-char {
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(18rem, 36vw, 46rem);
+      font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.03);
+      bottom: -4rem; right: -3rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.05em; line-height: 1;
+    }
+    .hero-inner {
+      max-width: 1340px; margin: 0 auto; width: 100%;
+      padding-bottom: 7rem;
+    }
+    .hero-eyebrow {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 3rem;
+      opacity: 0; animation: fadeUp .7s .1s forwards;
+    }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: end;
+    }
+    .hero-h1 {
+      font-family: var(--ff-disp);
+      font-size: clamp(4rem, 9vw, 10rem);
+      font-weight: 300; line-height: .88;
+      letter-spacing: -.02em;
+      opacity: 0; animation: fadeUp .9s .25s forwards;
+    }
+    .hero-h1 em { font-style: italic; color: var(--accent); }
+    .hero-right {
+      opacity: 0; animation: fadeUp .9s .5s forwards;
+      padding-bottom: .5rem;
+    }
+    .hero-opening {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.3rem, 2vw, 1.75rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.5; color: var(--cream);
+      margin-bottom: 1.8rem;
+    }
+    .hero-body {
+      font-size: .9rem; line-height: 1.95;
+      color: var(--cream-dim); max-width: 44ch;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2rem;
+    }
+
+    /* ── MANIFESTO ── */
+    .manifesto {
+      position: relative; z-index: 1;
+      background: var(--bg2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .manifesto-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid;
+      grid-template-columns: 3fr 4fr;
+      gap: 8rem; align-items: start;
+    }
+    .manifesto-left { }
+    .manifesto-sticky {
+      position: sticky; top: 7rem;
+    }
+    .manifesto-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 2rem;
+    }
+    .manifesto-headline em { font-style: italic; color: var(--accent); }
+    .manifesto-tagline {
+      font-family: var(--ff-disp);
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1; color: var(--accent);
+      letter-spacing: -.01em;
+    }
+    .manifesto-right { }
+    .manifesto-paras {
+      display: flex; flex-direction: column; gap: 2rem;
+    }
+    .manifesto-para {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+      font-weight: 300; line-height: 1.65;
+      color: var(--cream);
+      padding-left: 2rem;
+      border-left: 1px solid var(--line);
+      transition: border-color .3s;
+    }
+    .manifesto-para:hover { border-color: rgba(196,113,74,.4); }
+    .manifesto-para em { font-style: italic; color: var(--accent); }
+    .manifesto-para strong { font-style: normal; font-weight: 500; color: var(--cream); }
+
+    /* ── DISCIPLINE ── */
+    .discipline {
+      position: relative; z-index: 1;
+    }
+    .discipline-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+    }
+    .discipline-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end;
+      margin-bottom: 5rem;
+    }
+    .discipline-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+    }
+    .discipline-headline em { font-style: italic; color: var(--accent); }
+    .discipline-intro {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .discipline-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .disc-card {
+      background: var(--bg);
+      padding: 2.8rem 2rem;
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      transition: background .3s;
+      position: relative; overflow: hidden;
+    }
+    .disc-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .35s;
+    }
+    .disc-card:hover { background: rgba(196,113,74,.05); }
+    .disc-card:hover::after { transform: scaleX(1); }
+    .disc-letter {
+      font-family: var(--ff-disp);
+      font-size: 3.5rem; font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.2); line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .disc-title {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream); margin-bottom: .8rem;
+    }
+    .disc-desc {
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.6;
+      flex: 1; margin-bottom: 1.5rem;
+    }
+    .disc-link {
+      font-size: .65rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── PRISTOP ── */
+    .pristop {
+      position: relative; z-index: 1;
+      background: var(--bg3);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .pristop-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 8rem; align-items: center;
+    }
+    .pristop-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.8rem);
+      font-weight: 300; line-height: 1.0;
+      margin-bottom: 2.5rem;
+    }
+    .pristop-headline em { font-style: italic; color: var(--accent); }
+    .pristop-paras {
+      display: flex; flex-direction: column; gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .pristop-para {
+      font-size: .9rem; line-height: 1.95;
+      color: var(--cream-dim);
+    }
+    .pristop-para strong { color: var(--cream); font-weight: 600; }
+    .pristop-pillars {
+      list-style: none;
+      display: flex; flex-direction: column; gap: .6rem;
+    }
+    .pristop-pillar {
+      display: flex; align-items: center; gap: 1.2rem;
+      font-size: .82rem; font-weight: 600;
+      letter-spacing: .08em; color: var(--cream);
+    }
+    .pristop-pillar::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .pristop-right { }
+    .pristop-quote {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-style: italic; font-weight: 300;
+      line-height: 1.4; color: var(--cream);
+      border-left: 2px solid rgba(196,113,74,.35);
+      padding-left: 2.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .pristop-quote-attr {
+      padding-left: 2.5rem;
+      font-size: .65rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── GLEDALIŠČE (background) ── */
+    .gledal {
+      position: relative; z-index: 1;
+      overflow: hidden;
+    }
+    .gledal::before {
+      content: 'ODER';
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(12rem, 28vw, 34rem);
+      font-weight: 300;
+      color: rgba(196,113,74,.03);
+      bottom: -2rem; right: -2rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.04em; line-height: 1;
+    }
+    .gledal-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      position: relative; z-index: 1;
+    }
+    .gledal-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end;
+      margin-bottom: 5rem;
+    }
+    .gledal-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+    }
+    .gledal-headline em { font-style: italic; color: var(--accent); }
+    .gledal-intro {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .gledal-timeline {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .gledal-item {
+      display: grid; grid-template-columns: 120px 1fr;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-bottom: none;
+      transition: background .25s;
+    }
+    .gledal-item:last-child { border-bottom: 1px solid var(--line); }
+    .gledal-item:hover { background: rgba(196,113,74,.04); }
+    .gledal-year {
+      padding: 1.4rem 1.5rem;
+      border-right: 1px solid var(--line);
+      font-family: var(--ff-disp);
+      font-size: 1rem; font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.5);
+      display: flex; align-items: center;
+    }
+    .gledal-content {
+      padding: 1.4rem 2rem;
+      display: flex; align-items: center;
+    }
+    .gledal-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(.95rem, 1.3vw, 1.1rem);
+      font-weight: 300; font-style: italic;
+      color: var(--cream-dim); line-height: 1.5;
+    }
+    .gledal-text strong {
+      font-style: normal; font-weight: 500; color: var(--cream);
+    }
+
+    /* ── CTA FINAL ── */
+    .finalcta {
+      position: relative; z-index: 1;
+      background: var(--accent);
+      overflow: hidden;
+    }
+    .finalcta::before {
+      content: 'Dihaj.';
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(8rem, 20vw, 26rem);
+      font-weight: 300; font-style: italic;
+      color: rgba(0,0,0,.07);
+      bottom: -2rem; right: -1rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.02em; line-height: 1;
+    }
+    .finalcta-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .finalcta-tag {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: rgba(12,11,9,.45); margin-bottom: 1.5rem;
+    }
+    .finalcta-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: .95;
+      color: var(--bg); margin-bottom: 1.5rem;
+    }
+    .finalcta-headline em { font-style: italic; }
+    .finalcta-sub {
+      font-size: .9rem; color: rgba(12,11,9,.65);
+      line-height: 1.85; max-width: 42ch;
+    }
+    .finalcta-right {
+      display: flex; flex-direction: column; gap: 1.2rem;
+    }
+    .finalcta-btn-main {
+      display: inline-block;
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--accent); background: var(--bg);
+      text-decoration: none;
+      padding: 1rem 2.4rem; border-radius: 2px;
+      transition: background .2s; align-self: flex-start;
+    }
+    .finalcta-btn-main:hover { background: rgba(12,11,9,.85); }
+    .finalcta-links {
+      display: flex; gap: 2rem; flex-wrap: wrap;
+    }
+    .finalcta-link {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(12,11,9,.6); text-decoration: none;
+      transition: color .2s;
+    }
+    .finalcta-link:hover { color: var(--bg); }
+    .finalcta-link::after { content: ' →'; }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--line);
+      padding: 3rem 3.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: var(--ff-disp);
+      font-size: .95rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--cream-dim);
+    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cream-xs); text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--cream-dim); }
+    .footer-copy { font-size: .62rem; color: rgba(90,85,78,.5); letter-spacing: .1em; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .rd1 { transition-delay: .1s; }
+    .rd2 { transition-delay: .2s; }
+    .rd3 { transition-delay: .3s; }
+    .rd4 { transition-delay: .4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 1.2rem 1.8rem; }
+      .nav-links { display: none; }
+      .breadcrumb { padding: 7rem 1.8rem 0; }
+      .hero { padding: 3rem 1.8rem 0; min-height: unset; }
+      .hero-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .manifesto-inner { grid-template-columns: 1fr; gap: 3.5rem; padding: 5rem 1.8rem; }
+      .manifesto-sticky { position: static; }
+      .discipline-inner { padding: 5rem 1.8rem; }
+      .discipline-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+      .discipline-grid { grid-template-columns: 1fr 1fr; }
+      .pristop-inner { grid-template-columns: 1fr; gap: 3.5rem; padding: 5rem 1.8rem; }
+      .gledal-inner { padding: 5rem 1.8rem; }
+      .gledal-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+      .finalcta-inner { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.8rem; }
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 1.8rem; }
+    }
+    @media (max-width: 560px) {
+      .discipline-grid { grid-template-columns: 1fr; }
+      .gledal-item { grid-template-columns: 80px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="site-nav">
+  <a href="../index.html" class="nav-logo">Marko <span>Ujc</span></a>
+  <ul class="nav-links">
+    <li><a href="../trema/index.html">Trema</a></li>
+    <li><a href="../strenirkaj-nastop/index.html">sTRENIRkAJ</a></li>
+    <li><a href="../uprizoritev/index.html">Uprizoritev</a></li>
+    <li><a href="../o-marku/index.html" class="active">O Marku</a></li>
+    <li><a href="../zapisi/index.html">Zapisi</a></li>
+  </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
+  <a href="../kontakt/index.html" class="nav-cta">Kontakt</a>
+</nav>
+
+<!-- MOBILNI MENI – se odpre ob kliku hamburgerja -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="../trema/index.html">Trema</a>
+  <a href="../strenirkaj-nastop/index.html">sTRENIRkAJ NASTOP</a>
+  <a href="../uprizoritev/index.html">Uprizoritev</a>
+  <a href="../o-marku/index.html">O Marku</a>
+  <a href="../zapisi/index.html">Zapisi</a>
+  <a href="../kontakt/index.html">Kontakt</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../index.html">markoujc.com</a>
+  <span class="breadcrumb-sep">·</span>
+  <span class="breadcrumb-current">O Marku</span>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-char" aria-hidden="true">M</div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">O Marku</p>
+    <div class="hero-layout">
+      <h1 class="hero-h1">Ne delam<br>z <em>nastopom</em><br>kot tehniko.</h1>
+      <div class="hero-right">
+        <p class="hero-opening">Delam z ljudmi.</p>
+        <p class="hero-body">Moje delo izhaja iz gledališča, prakse in dela s telesom. Ne zanimajo me popolni nastopi. Zanima me, kaj ostane — ko greš skozi tremo.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <div class="manifesto-left">
+      <div class="manifesto-sticky">
+        <p class="section-label reveal">Pristop</p>
+        <h2 class="manifesto-headline reveal rd1">Iz česa<br>izhaja<br><em>delo</em></h2>
+        <div class="manifesto-tagline reveal rd2">Dihaj.</div>
+      </div>
+    </div>
+    <div class="manifesto-right">
+      <div class="manifesto-paras">
+        <p class="manifesto-para reveal">
+          V zadnjih letih sem več časa posvetil temu, kako delati s sabo — <em>ne samo na odru.</em> Trema, ki jo poznam iz lastne izkušnje, ni bila le ovira. Bila je učiteljica.
+        </p>
+        <p class="manifesto-para reveal rd1">
+          Delo z nastopom me je privedlo do dela z <em>egom, telesom in prisotnostjo.</em> Razumel sem, da tehnika brez zavedanja ne zdrži. Da nastop brez stika s sabo razpade.
+        </p>
+        <p class="manifesto-para reveal rd2">
+          Danes to prenašam v delo z drugimi. Ne kot recept — kot <em>proces.</em> Skupaj z vsakim posameznikom gradim tisto, kar njemu manjka. Ne kar bi moral imeti.
+        </p>
+        <p class="manifesto-para reveal rd3">
+          <strong>Stran ne nastopa kot razglas mojstrstva.</strong> Je prostor prakse, procesa in prisotnosti. Enako kot moje delo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINE -->
+<section class="discipline">
+  <div class="discipline-inner">
+    <div class="discipline-header">
+      <div>
+        <p class="section-label reveal">Področja dela</p>
+        <h2 class="discipline-headline reveal rd1">Uprizoritev<br>v vseh <em>oblikah.</em></h2>
+      </div>
+      <p class="discipline-intro reveal rd2">Oder, kamera, glas, tekst, prostor srečanja. Vsaka disciplina uči drugega — skupaj tvorijo celoto.</p>
+    </div>
+    <div class="discipline-grid">
+      <a href="../strenirkaj-nastop/index.html" class="disc-card reveal">
+        <div class="disc-letter">T.</div>
+        <div class="disc-title">Trening nastopa</div>
+        <p class="disc-desc">Javni nastop kot praksa. Trema kot vhod. Prisotnost kot cilj.</p>
+        <div class="disc-link">sTRENIRkAJ NASTOP →</div>
+      </a>
+      <a href="../uprizoritev/index.html" class="disc-card reveal rd1">
+        <div class="disc-letter">I.</div>
+        <div class="disc-title">Igralska praksa</div>
+        <p class="disc-desc">Gledališka vloga, televizija, film. Delo z likom kot delo s sabo.</p>
+        <div class="disc-link">Igralska praksa →</div>
+      </a>
+      <a href="../uprizoritev/index.html" class="disc-card reveal rd2">
+        <div class="disc-letter">R.</div>
+        <div class="disc-title">Režija</div>
+        <p class="disc-desc">Vodenje prostora, ritma, energije. Ustvarjanje iz ozadja naprej.</p>
+        <div class="disc-link">Režija →</div>
+      </a>
+      <a href="../uprizoritev/index.html" class="disc-card reveal rd3">
+        <div class="disc-letter">S.</div>
+        <div class="disc-title">Scenarij</div>
+        <p class="disc-desc">Zgradba, tok, sporočilo. Beseda, ki postane izkušnja.</p>
+        <div class="disc-link">Scenarij →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRISTOP -->
+<section class="pristop">
+  <div class="pristop-inner">
+    <div>
+      <p class="section-label reveal">Filozofija dela</p>
+      <h2 class="pristop-headline reveal rd1">Praksa<br>pred <em>teorijo.</em><br>Vedno.</h2>
+      <div class="pristop-paras reveal rd2">
+        <p class="pristop-para">
+          <strong>Ne verjamem v nasvete, ki jih ne moreš preizkusiti.</strong> Vse, kar delam z udeleženci, izhaja iz lastne prakse — iz napak, ki sem jih naredil, in iz odkritij, ki so sledila.
+        </p>
+        <p class="pristop-para">
+          Telo ve več kot glava. Misli nas varajo, telo pa pokaže resnico. Zato začnemo tam — z gibanjem, dihom, odzivom. Teorija pride pozneje, ko jo imaš za kaj.
+        </p>
+      </div>
+      <ul class="pristop-pillars reveal rd3">
+        <li class="pristop-pillar">praksa pred teorijo</li>
+        <li class="pristop-pillar">telo pred glavo</li>
+        <li class="pristop-pillar">ponavljanje pred "talentom"</li>
+        <li class="pristop-pillar">prisotnost pred popolnostjo</li>
+      </ul>
+    </div>
+    <div class="pristop-right reveal rd2">
+      <blockquote class="pristop-quote">
+        „Ne zanimajo me popolni nastopi. Zanima me, kaj ostane, ko greš skozi tremo."
+      </blockquote>
+      <p class="pristop-quote-attr">— Marko Ujc</p>
+    </div>
+  </div>
+</section>
+
+<!-- GLEDALIŠKA SLED -->
+<section class="gledal">
+  <div class="gledal-inner">
+    <div class="gledal-header">
+      <div>
+        <p class="section-label reveal">Sled prakse</p>
+        <h2 class="gledal-headline reveal rd1">Od <em>odra</em><br>do prostora<br>srečanja.</h2>
+      </div>
+      <p class="gledal-intro reveal rd2">Gledališka izkušnja je osnova vsega. Oder uči prisotnosti — pred ljudmi, v realnem času, brez mreže.</p>
+    </div>
+    <div class="gledal-timeline reveal rd1">
+      <div class="gledal-item">
+        <div class="gledal-year">Oder</div>
+        <div class="gledal-content">
+          <p class="gledal-text"><strong>Gledališke predstave</strong> — vloge, prostori, procesi. Delo z likom kot delo s sabo.</p>
+        </div>
+      </div>
+      <div class="gledal-item">
+        <div class="gledal-year">Kamera</div>
+        <div class="gledal-content">
+          <p class="gledal-text"><strong>TV in film</strong> — prisotnost v drugačnem mediju. Tišina pred kamero kot posebna disciplina.</p>
+        </div>
+      </div>
+      <div class="gledal-item">
+        <div class="gledal-year">Režija</div>
+        <div class="gledal-content">
+          <p class="gledal-text"><strong>Vodenje prostora</strong> — od zamisli do realizacije. Ustvarjanje iz ozadja naprej.</p>
+        </div>
+      </div>
+      <div class="gledal-item">
+        <div class="gledal-year">Tekst</div>
+        <div class="gledal-content">
+          <p class="gledal-text"><strong>Avtorski scenariji</strong> — beseda, ki ima namen. Zgradba, ki nosi sporočilo.</p>
+        </div>
+      </div>
+      <div class="gledal-item">
+        <div class="gledal-year">Prostor</div>
+        <div class="gledal-content">
+          <p class="gledal-text"><strong>Povezovanje dogodkov</strong> — živ organizem. Energija prostora in prisotnost pred občinstvom.</p>
+        </div>
+      </div>
+      <div class="gledal-item">
+        <div class="gledal-year">Zdaj</div>
+        <div class="gledal-content">
+          <p class="gledal-text"><strong>Trening nastopa</strong> — vse zgornje v službi drugega. Praksa, ki se prenaša.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finalcta">
+  <div class="finalcta-inner">
+    <div>
+      <p class="finalcta-tag reveal">Naslednji korak</p>
+      <h2 class="finalcta-headline reveal rd1">Začni z<br><em>dihom.</em></h2>
+      <p class="finalcta-sub reveal rd2">Če veš, kaj potrebuješ — napiši. Če ne veš — tudi napiši. Skupaj ugotoviva.</p>
+    </div>
+    <div class="finalcta-right reveal rd1">
+      <a href="../kontakt/index.html" class="finalcta-btn-main">Kontaktiraj Marka →</a>
+      <div class="finalcta-links">
+        <a href="../strenirkaj-nastop/index.html" class="finalcta-link">sTRENIRkAJ NASTOP</a>
+        <a href="../trema/index.html" class="finalcta-link">O tremi</a>
+        <a href="../uprizoritev/index.html" class="finalcta-link">Uprizoritev</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Marko Ujc</div>
+  <ul class="footer-links">
+    <li><a href="../pravno/pogoji.html">Pogoji</a></li>
+    <li><a href="../pravno/zasebnost.html">Zasebnost</a></li>
+    <li><a href="../pravno/piskotki.html">Piškotki</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 markoujc.com</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

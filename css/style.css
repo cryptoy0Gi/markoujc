@@ -1,0 +1,234 @@
+/* ============================================================
+   MARKO UJC – SKUPNA STILSKA DATOTEKA
+   ============================================================
+
+   KAKO UREJATI:
+   – Barve:    Spremeni vrednosti v razdelku :root (spodaj)
+   – Pisave:   Zamenjaj Google Fonts link v <head> vsake strani
+   – Besedilo: Uredi direktno v HTML datotekah
+
+   BARVNA PALETA:
+   --bg        Ozadje (zelo temno)
+   --cream     Glavno besedilo
+   --accent    Terracotta poudarek (#c4714a)
+   --line      Subtilne črte in obrobe
+
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0c0b09;
+  --bg2:       #111009;
+  --bg3:       #161410;
+  --cream:     #e8e0d0;
+  --cream-dim: #9e9488;
+  --cream-xs:  #5a554e;
+  --accent:    #c4714a;   /* ← GLAVNA BARVA POUDARKA – zamenjaj tukaj */
+  --accent-lt: #d4895e;
+  --line:      rgba(232,224,208,.09);
+  --ff-disp:   'Cormorant Garamond', Georgia, serif;
+  --ff-body:   'Syne', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: var(--ff-body);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* Filmski šum v ozadju */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: .028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* ── NAVIGACIJA ── */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color .4s, background .4s, backdrop-filter .4s;
+}
+.site-nav.scrolled {
+  border-color: var(--line);
+  background: rgba(12,11,9,.88);
+  backdrop-filter: blur(18px);
+}
+.nav-logo {
+  font-family: var(--ff-disp);
+  font-size: 1.2rem; font-weight: 400;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--cream); text-decoration: none;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-size: .68rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--cream-dim); text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--cream); }
+.nav-links a.active { color: var(--accent); }
+.nav-cta {
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); text-decoration: none;
+  border: 1px solid rgba(196,113,74,.3);
+  padding: .55rem 1.5rem; border-radius: 2px;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.nav-cta:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+/* Mobilni hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  padding: .4rem;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 1px;
+  background: var(--cream);
+  transition: transform .3s, opacity .3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* Mobilni meni */
+.nav-mobile {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(12,11,9,.97);
+  z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 2.5rem;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-family: var(--ff-disp);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 300; font-style: italic;
+  color: var(--cream-dim); text-decoration: none;
+  letter-spacing: .05em;
+  transition: color .2s;
+}
+.nav-mobile a:hover,
+.nav-mobile a.active { color: var(--accent); }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  position: relative; z-index: 1;
+  padding: 8rem 3.5rem 0;
+  display: flex; align-items: center; gap: .8rem;
+}
+.breadcrumb a {
+  font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--cream-xs); text-decoration: none; transition: color .2s;
+}
+.breadcrumb a:hover { color: var(--cream-dim); }
+.breadcrumb-sep { color: var(--cream-xs); font-size: .62rem; }
+.breadcrumb-current {
+  font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ── GUMBI ── */
+.btn-primary {
+  display: inline-block;
+  font-size: .7rem; font-weight: 700;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--bg); background: var(--accent);
+  text-decoration: none;
+  padding: 1rem 2.4rem; border-radius: 2px;
+  transition: background .2s, transform .2s;
+  font-family: var(--ff-body);
+}
+.btn-primary:hover { background: var(--accent-lt); transform: translateY(-2px); }
+
+.btn-ghost {
+  display: inline-block;
+  font-size: .7rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--cream-dim); text-decoration: none;
+  transition: color .2s;
+  font-family: var(--ff-body);
+}
+.btn-ghost:hover { color: var(--cream); }
+.btn-ghost::after { content: ' →'; }
+
+/* ── SKUPNE KOMPONENTE ── */
+.section-label {
+  font-size: .63rem; font-weight: 700;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 2rem;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid var(--line);
+  padding: 3rem 3.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-logo {
+  font-family: var(--ff-disp);
+  font-size: .95rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--cream-dim);
+}
+.footer-links { display: flex; gap: 2rem; list-style: none; }
+.footer-links a {
+  font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--cream-xs); text-decoration: none; transition: color .2s;
+}
+.footer-links a:hover { color: var(--cream-dim); }
+.footer-copy { font-size: .62rem; color: rgba(90,85,78,.5); letter-spacing: .1em; }
+
+/* ── ANIMACIJE ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+.anim-fadeup { opacity: 0; animation: fadeUp .9s forwards; }
+.anim-delay-1 { animation-delay: .15s; }
+.anim-delay-2 { animation-delay: .3s; }
+.anim-delay-3 { animation-delay: .5s; }
+.anim-delay-4 { animation-delay: .7s; }
+
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+.rd1 { transition-delay: .1s; }
+.rd2 { transition-delay: .2s; }
+.rd3 { transition-delay: .3s; }
+.rd4 { transition-delay: .4s; }
+
+/* ── ODZIVNI DESIGN (mobilno) ── */
+@media (max-width: 960px) {
+  .site-nav { padding: 1.2rem 1.8rem; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+  .breadcrumb { padding: 7rem 1.8rem 0; }
+  .site-footer {
+    flex-direction: column; gap: 1.5rem;
+    text-align: center; padding: 2.5rem 1.8rem;
+  }
+}

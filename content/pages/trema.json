@@ -1,0 +1,69 @@
+{
+  "title": "Trema",
+  "slug": "trema",
+  "status": "published",
+  "priority": 1,
+  "role": "Glavna SEO in konverzijska vstopna stran.",
+  "seo": {
+    "meta_title": "Trema - kaj je in kako delati z njo",
+    "meta_description": "Trema ni napaka. Je odziv telesa na situacijo, ki je pomembna. Nauči se razumeti, kaj se dogaja, in kako s tem delati skozi prakso.",
+    "primary_keyword": "trema",
+    "secondary_keywords": [
+      "strah pred javnim nastopanjem",
+      "kako obvladati tremo",
+      "trema pred nastopom",
+      "javno nastopanje"
+    ]
+  },
+  "hero": {
+    "eyebrow": "Trema",
+    "headline": "Trema ni težava. Je signal.",
+    "intro": "Telo se odzove, ker je situacija pomembna. Vprašanje ni, kako tremo odstraniti. Vprašanje je, kako ostati prisoten, ko se pojavi.",
+    "cta_label": "Preveri program",
+    "cta_url": "/strenirkaj-nastop/"
+  },
+  "sections": [
+    {
+      "id": "kaj-je",
+      "label": "Kaj je trema",
+      "headline": "Trema je telesni odziv, ne osebna napaka.",
+      "body": [
+        "Srčni utrip se poveča. Dihanje se spremeni. Pozornost se zoži. Glas se lahko dvigne, umakne ali pospeši.",
+        "To ni dokaz, da nisi sposoben. To je dokaz, da telo situacijo bere kot pomembno."
+      ]
+    },
+    {
+      "id": "zakaj-nastane",
+      "label": "Zakaj nastane",
+      "headline": "Problem ni samo v glavi.",
+      "body": [
+        "Veliko ljudi poskuša tremo rešiti z razlago, pozitivnimi stavki ali nasveti.",
+        "Na odru pa se pokaže, kaj je telo dejansko izkusilo. Kar ni bilo preizkušeno v prostoru, pod pogledom drugih, se hitro sesuje."
+      ]
+    },
+    {
+      "id": "kaj-ne-deluje",
+      "label": "Kaj ne deluje",
+      "headline": "Samozavest ni stikalo.",
+      "body": [
+        "Nasvet 'samo sprosti se' redko pomaga. Dihalne tehnike brez prakse pogosto delujejo v sobi, ne pa pred ljudmi.",
+        "Trema se ne odpravi z enim trikom. Telo potrebuje izkušnjo."
+      ]
+    },
+    {
+      "id": "kako-delati",
+      "label": "Kako delati z njo",
+      "headline": "Trema se trenira skozi izpostavljanje.",
+      "body": [
+        "Majhni nastopi. Varni prostori. Napaka kot del procesa. Ponovitev.",
+        "Cilj ni popoln nastop. Cilj je, da lahko ostaneš v prostoru, tudi ko ni udobno."
+      ]
+    }
+  ],
+  "conversion": {
+    "headline": "Če se prepoznaš, je naslednji korak praksa.",
+    "body": "sTRENIRkAJ NASTOP je 8-tedenski program za delo s tremo skozi telo, glas, prisotnost in realne situacije.",
+    "cta_label": "Preveri sTRENIRkAJ NASTOP",
+    "cta_url": "/strenirkaj-nastop/"
+  }
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       MARKO UJC – DOMAČA STRAN
+       Uredi besedilo neposredno v tej datoteki.
+       Skupne stile najdeš v: css/style.css
+       ============================================================ -->
+
+  <title>Marko Ujc – Dihaj.</title>
+  <!-- SEO META -->
+  <meta name="description" content="Javni nastop, trema in prezenca. Marko Ujc je trener nastopanja in gledališki ustvarjalec. Od odra do kamere." />
+  <link rel="canonical" href="https://markoujc.com/" />
+
+  <!-- FAVICON – temno ozadje, terracotta M -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b09'/><text y='.88em' font-size='68' font-family='Georgia,serif' fill='%23c4714a' font-style='italic' x='8'>M</text></svg>" />
+
+  <!-- OPEN GRAPH – prikaz ob deljenju na LinkedIn, WhatsApp itd. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marko Ujc – Dihaj." />
+  <meta property="og:description" content="Javni nastop, trema in prezenca. Marko Ujc je trener nastopanja in gledališki ustvarjalec. Od odra do kamere." />
+  <meta property="og:url" content="https://markoujc.com/" />
+  <meta property="og:site_name" content="Marko Ujc" />
+  <meta property="og:locale" content="sl_SI" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Marko Ujc – Dihaj." />
+  <meta name="twitter:description" content="Javni nastop, trema in prezenca. Marko Ujc je trener nastopanja in gledališki ustvarjalec. Od odra do kamere." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── HERO ── */
+    .hero {
+      position: relative; z-index: 1;
+      min-height: 100svh;
+      display: grid; grid-template-rows: 1fr auto;
+      padding: 0 3.5rem; overflow: hidden;
+    }
+    .hero-bg-text {
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(14rem, 28vw, 30rem);
+      font-weight: 300; color: rgba(196,113,74,.04);
+      white-space: nowrap; bottom: -3rem; right: -2rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.04em; line-height: 1;
+    }
+    .hero-main {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: end; padding-top: 14rem; padding-bottom: 2rem; gap: 3rem;
+    }
+    .hero-eyebrow {
+      font-size: .65rem; font-weight: 600;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2.8rem;
+    }
+    .hero-h1 {
+      font-family: var(--ff-disp);
+      font-size: clamp(5rem, 11vw, 11rem);
+      font-weight: 300; line-height: .9; letter-spacing: -.02em;
+    }
+    .hero-h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.45; color: var(--cream); margin-bottom: 1.6rem;
+    }
+    .hero-desc {
+      font-size: .9rem; line-height: 1.9;
+      color: var(--cream-dim); max-width: 40ch; margin-bottom: 3rem;
+    }
+    .hero-actions { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+    .hero-scroll {
+      display: flex; align-items: center; gap: 1.2rem;
+      padding-bottom: 3.5rem;
+    }
+    .hero-scroll-line {
+      width: 48px; height: 1px;
+      background: linear-gradient(to right, var(--accent), transparent);
+    }
+    .hero-scroll span {
+      font-size: .6rem; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--cream-xs);
+    }
+
+    /* ── POTI ── */
+    .paths { position: relative; z-index: 1; background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .paths-inner { max-width: 1340px; margin: 0 auto; padding: 6rem 3.5rem; }
+    .paths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .path-card { background: var(--bg2); padding: 3rem 2.5rem 2.5rem; display: flex; flex-direction: column; transition: background .3s; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
+    .path-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+    .path-card:hover { background: rgba(196,113,74,.04); }
+    .path-card:hover::before { transform: scaleX(1); }
+    .path-num { font-family: var(--ff-disp); font-size: 3.5rem; font-weight: 300; font-style: italic; color: rgba(196,113,74,.18); line-height: 1; margin-bottom: 1.5rem; }
+    .path-title { font-family: var(--ff-disp); font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 1rem; }
+    .path-desc { font-size: .85rem; color: var(--cream-dim); line-height: 1.75; flex: 1; margin-bottom: 2rem; }
+    .path-link { font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+
+    /* ── ZAKAJ DELUJE ── */
+    .why { position: relative; z-index: 1; }
+    .why-inner { max-width: 1340px; margin: 0 auto; padding: 8rem 3.5rem; display: grid; grid-template-columns: 5fr 4fr; gap: 7rem; align-items: center; }
+    .why-headline { font-family: var(--ff-disp); font-size: clamp(2.5rem, 4.5vw, 4.5rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.8rem; }
+    .why-headline em { font-style: italic; color: var(--accent); }
+    .why-body { font-size: .92rem; color: var(--cream-dim); line-height: 1.9; margin-bottom: 2.5rem; max-width: 46ch; }
+    .why-pillars { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-bottom: 3rem; }
+    .why-pillars li { display: flex; align-items: center; gap: 1.2rem; font-size: .82rem; font-weight: 600; letter-spacing: .08em; color: var(--cream); }
+    .why-pillars li::before { content: ''; width: 24px; height: 1px; background: var(--accent); flex-shrink: 0; }
+    .why-quote-wrap { border-left: 2px solid rgba(196,113,74,.35); padding-left: 2.5rem; }
+    .why-quote { font-family: var(--ff-disp); font-size: clamp(1.4rem, 2.2vw, 2rem); font-style: italic; font-weight: 300; line-height: 1.45; color: var(--cream); margin-bottom: 1.2rem; }
+    .why-quote-meta { font-size: .65rem; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
+
+    /* ── ZA KOGA ── */
+    .forkoga { position: relative; z-index: 1; background: var(--bg3); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .forkoga-inner { max-width: 1340px; margin: 0 auto; padding: 7rem 3.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .forkoga-headline { font-family: var(--ff-disp); font-size: clamp(2.5rem, 4.5vw, 4.2rem); font-weight: 300; line-height: 1.05; margin-top: 1.5rem; }
+    .forkoga-headline em { font-style: italic; color: var(--accent); }
+    .forkoga-list { list-style: none; display: flex; flex-direction: column; border: 1px solid var(--line); }
+    .forkoga-item { padding: 1.5rem 2rem; border-bottom: 1px solid var(--line); display: flex; align-items: flex-start; gap: 1.2rem; font-size: .88rem; color: var(--cream-dim); line-height: 1.6; transition: background .25s, color .25s; }
+    .forkoga-item:last-child { border-bottom: none; }
+    .forkoga-item:hover { background: rgba(196,113,74,.05); color: var(--cream); }
+    .forkoga-item::before { content: '—'; color: var(--accent); flex-shrink: 0; font-family: var(--ff-disp); font-size: 1.1rem; }
+
+    /* ── VSTOP ── */
+    .vstop { position: relative; z-index: 1; background: var(--accent); overflow: hidden; }
+    .vstop::after { content: 'TREMA'; position: absolute; font-family: var(--ff-disp); font-size: clamp(8rem, 20vw, 22rem); font-weight: 300; color: rgba(0,0,0,.07); bottom: -2rem; right: -1rem; pointer-events: none; user-select: none; letter-spacing: -.04em; line-height: 1; }
+    .vstop-inner { max-width: 1340px; margin: 0 auto; padding: 7rem 3.5rem; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .vstop-label { font-size: .63rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: rgba(12,11,9,.5); margin-bottom: 1.5rem; }
+    .vstop-headline { font-family: var(--ff-disp); font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 300; line-height: 1.05; color: var(--bg); margin-bottom: 1.5rem; }
+    .vstop-headline em { font-style: italic; }
+    .vstop-desc { font-size: .92rem; color: rgba(12,11,9,.65); line-height: 1.85; max-width: 42ch; margin-bottom: 2.5rem; }
+    .vstop-btn { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); background: var(--bg); text-decoration: none; padding: .9rem 2.2rem; border-radius: 2px; transition: background .2s; }
+    .vstop-btn:hover { background: rgba(12,11,9,.85); }
+    .vstop-steps { list-style: none; display: flex; flex-direction: column; gap: 1px; }
+    .vstop-step { background: rgba(0,0,0,.1); padding: 1.4rem 1.8rem; display: flex; align-items: center; gap: 1.5rem; transition: background .2s; }
+    .vstop-step:hover { background: rgba(0,0,0,.16); }
+    .vstop-step-num { font-family: var(--ff-disp); font-size: 1.8rem; font-weight: 300; color: rgba(12,11,9,.25); flex-shrink: 0; width: 2rem; }
+    .vstop-step-text { font-size: .82rem; font-weight: 600; letter-spacing: .05em; color: rgba(12,11,9,.8); }
+
+    /* ── MANIFEST ── */
+    .manifest { position: relative; z-index: 1; border-top: 1px solid var(--line); }
+    .manifest-inner { max-width: 1340px; margin: 0 auto; padding: 10rem 3.5rem; text-align: center; }
+    .manifest-pre { font-size: .63rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+    .manifest-title { font-family: var(--ff-disp); font-size: clamp(4rem, 9vw, 10rem); font-weight: 300; line-height: .9; margin-bottom: 2.5rem; }
+    .manifest-title em { font-style: italic; color: var(--accent); }
+    .manifest-body { font-size: .95rem; color: var(--cream-dim); max-width: 48ch; margin: 0 auto 4rem; line-height: 1.9; }
+    .manifest-actions { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── MOBILNO ── */
+    @media (max-width: 960px) {
+      .hero { padding: 0 1.8rem; }
+      .hero-main { grid-template-columns: 1fr; padding-top: 9rem; gap: 2rem; }
+      .paths-inner, .why-inner, .forkoga-inner, .vstop-inner, .manifest-inner { padding: 5rem 1.8rem; }
+      .paths-grid { grid-template-columns: 1fr; }
+      .why-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+      .forkoga-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .vstop-inner { grid-template-columns: 1fr; gap: 3rem; }
+    }
+  </style>
+  <!-- SCHEMA.ORG – strukturirani podatki za Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marko Ujc",
+    "url": "https://markoujc.com",
+    "jobTitle": "Trener javnega nastopanja, igralec, režiser",
+    "description": "Javni nastop, trema in prezenca. Od odra do kamere.",
+    "sameAs": [],
+    "offers": {
+      "@type": "Offer",
+      "name": "sTRENIRkAJ NASTOP",
+      "description": "8-tedenski trening javnega nastopanja",
+      "url": "https://markoujc.com/strenirkaj-nastop/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGACIJA – enaka na vseh straneh
+     Zamenjaj href vrednosti če spreminjaš URL strukturo
+     ============================================================ -->
+<nav class="site-nav" id="site-nav">
+  <a href="index.html" class="nav-logo">Marko <span>Ujc</span></a>
+  <ul class="nav-links">
+    <li><a href="trema/index.html">Trema</a></li>
+    <li><a href="strenirkaj-nastop/index.html">sTRENIRkAJ</a></li>
+    <li><a href="uprizoritev/index.html">Uprizoritev</a></li>
+    <li><a href="o-marku/index.html">O Marku</a></li>
+    <li><a href="zapisi/index.html">Zapisi</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Meni">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="kontakt/index.html" class="nav-cta">Kontakt</a>
+</nav>
+
+<!-- Mobilni meni -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="trema/index.html">Trema</a>
+  <a href="strenirkaj-nastop/index.html">sTRENIRkAJ NASTOP</a>
+  <a href="uprizoritev/index.html">Uprizoritev</a>
+  <a href="o-marku/index.html">O Marku</a>
+  <a href="zapisi/index.html">Zapisi</a>
+  <a href="kontakt/index.html">Kontakt</a>
+</div>
+
+<!-- ============================================================
+     HERO – UREDI BESEDILO TUKAJ
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-bg-text" aria-hidden="true">Dihaj.</div>
+  <div class="hero-main">
+    <div>
+      <!-- Majhen napis nad naslovom -->
+      <p class="hero-eyebrow anim-fadeup">Javni nastop · Trema · Prezenca</p>
+      <!-- Glavni naslov -->
+      <h1 class="hero-h1 anim-fadeup anim-delay-1">Pre<em>zen</em>ca.<br>Od treme<br>do nastopa.</h1>
+    </div>
+    <div class="anim-fadeup anim-delay-2">
+      <!-- Podnaslov -->
+      <p class="hero-sub">Delam z ljudmi, ki morajo stati pred drugimi.</p>
+      <!-- Opis -->
+      <p class="hero-desc">Na odru, pred kamero ali v poslovnem prostoru. Skupaj gradimo sposobnost biti prisoten — tudi takrat, ko ti ni udobno.</p>
+      <div class="hero-actions">
+        <a href="strenirkaj-nastop/index.html" class="btn-primary">sTRENIRkAJ NASTOP</a>
+        <a href="trema/index.html" class="btn-ghost">Razumej tremo</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll anim-fadeup anim-delay-4">
+    <div class="hero-scroll-line"></div>
+    <span>Izberi svojo pot</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     POTI – 3 VSTOPNE TOČKE
+     ============================================================ -->
+<div class="paths">
+  <div class="paths-inner">
+    <p class="section-label reveal">Izberi svojo pot</p>
+    <div class="paths-grid">
+      <a href="trema/index.html" class="path-card reveal">
+        <div class="path-num">I.</div>
+        <div class="path-title">Trema</div>
+        <p class="path-desc">Razumej, kaj se ti dogaja — in kako s tem delati. Trema ni ovira. Je signal.</p>
+        <div class="path-link">Preberi več →</div>
+      </a>
+      <a href="strenirkaj-nastop/index.html" class="path-card reveal rd1">
+        <div class="path-num">II.</div>
+        <div class="path-title">sTRENIRkAJ NASTOP</div>
+        <p class="path-desc">Trening javnega nastopanja, ki temelji na praksi. 8 tednov. Realne situacije. Neposreden feedback.</p>
+        <div class="path-link">Razišči program →</div>
+      </a>
+      <a href="uprizoritev/index.html" class="path-card reveal rd2">
+        <div class="path-num">III.</div>
+        <div class="path-title">Uprizoritev</div>
+        <p class="path-desc">Oder, kamera in prostor srečanja. Kontekstualna sled prakse — tega, kar je bilo narejeno in kako.</p>
+        <div class="path-link">Poglej projekte →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ZAKAJ DELUJE
+     ============================================================ -->
+<section class="why">
+  <div class="why-inner">
+    <div>
+      <p class="section-label reveal">Zakaj to deluje</p>
+      <h2 class="why-headline reveal rd1">Ne učim<br><em>samozavesti.</em></h2>
+      <p class="why-body reveal rd2">Gradim sposobnost, da stojiš pred ljudmi — tudi takrat, ko ti ni udobno. To ni tehnika. Je praksa, ki jo razviješ skozi ponavljanje.</p>
+      <ul class="why-pillars reveal rd3">
+        <li>praksa pred teorijo</li>
+        <li>telo pred glavo</li>
+        <li>ponavljanje pred "talentom"</li>
+      </ul>
+      <a href="o-marku/index.html" class="btn-ghost reveal rd4">Več o pristopu</a>
+    </div>
+    <div>
+      <div class="why-quote-wrap reveal rd2">
+        <!-- CITAT – uredi tukaj -->
+        <blockquote class="why-quote">„Trema ni tvoja slabost — je tvoja prednost."</blockquote>
+        <p class="why-quote-meta">— Marko Ujc</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ZA KOGA
+     ============================================================ -->
+<div class="forkoga">
+  <div class="forkoga-inner">
+    <div>
+      <p class="section-label reveal">Za koga</p>
+      <h2 class="forkoga-headline reveal rd1">Za ljudi,<br>ki <em>stojijo</em><br>pred drugimi.</h2>
+    </div>
+    <!-- SEZNAM – dodaj ali odstrani <li> elemente -->
+    <ul class="forkoga-list reveal rd1">
+      <li class="forkoga-item">imajo znanje, a jih blokira trema</li>
+      <li class="forkoga-item">želijo bolj suveren nastop</li>
+      <li class="forkoga-item">delajo z ljudmi — predavanja, pitchi, nastopi</li>
+      <li class="forkoga-item">iščejo realno prakso, ne motivacije</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     VSTOPNA TOČKA (terracotta sekcija)
+     ============================================================ -->
+<div class="vstop">
+  <div class="vstop-inner">
+    <div>
+      <p class="vstop-label reveal">Vstopna točka</p>
+      <h2 class="vstop-headline reveal rd1">Če ne veš,<br>kje <em>začeti</em> —<br>začni tukaj.</h2>
+      <p class="vstop-desc reveal rd2">Stran o tremi je zasnovana tako, da razumeš, kaj se ti dogaja — brez patologiziranja, brez hitrih rešitev.</p>
+      <a href="trema/index.html" class="vstop-btn reveal rd3">TREMA →</a>
+    </div>
+    <ul class="vstop-steps reveal rd2">
+      <li class="vstop-step"><span class="vstop-step-num">1</span><span class="vstop-step-text">Razumej, kaj se dogaja v telesu</span></li>
+      <li class="vstop-step"><span class="vstop-step-num">2</span><span class="vstop-step-text">Prepoznaj, kako se kaže pri tebi</span></li>
+      <li class="vstop-step"><span class="vstop-step-num">3</span><span class="vstop-step-text">Ugotovi, kaj ne deluje — in kaj deluje</span></li>
+      <li class="vstop-step"><span class="vstop-step-num">4</span><span class="vstop-step-text">Izberi svojo pot naprej</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     ZAKLJUČNI MANIFEST
+     ============================================================ -->
+<section class="manifest">
+  <div class="manifest-inner">
+    <p class="manifest-pre reveal">Začni</p>
+    <h2 class="manifest-title reveal rd1">Di<em>haj.</em></h2>
+    <p class="manifest-body reveal rd2">Stran ne nastopa kot razglas mojstrstva. Je prostor prakse, procesa in prisotnosti.</p>
+    <div class="manifest-actions reveal rd3">
+      <a href="strenirkaj-nastop/index.html" class="btn-primary">sTRENIRkAJ NASTOP</a>
+      <a href="kontakt/index.html" class="btn-ghost">Kontaktiraj Marka</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER – enak na vseh straneh
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-logo">Marko Ujc</div>
+  <ul class="footer-links">
+    <li><a href="pravno/pogoji.html">Pogoji</a></li>
+    <li><a href="pravno/zasebnost.html">Zasebnost</a></li>
+    <li><a href="pravno/piskotki.html">Piškotki</a></li>
+  </ul>
+  <!-- LETNICA – posodobi vsako leto -->
+  <div class="footer-copy">© 2026 markoujc.com</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

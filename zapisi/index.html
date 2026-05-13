@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zapisi – Marko Ujc</title>
+  <!-- SEO META -->
+  <meta name="description" content="Zapisi iz prakse — o tremi, nastopanju in prisotnosti. Brez receptov." />
+  <link rel="canonical" href="https://markoujc.com/zapisi/" />
+
+  <!-- FAVICON – temno ozadje, terracotta M -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b09'/><text y='.88em' font-size='68' font-family='Georgia,serif' fill='%23c4714a' font-style='italic' x='8'>M</text></svg>" />
+
+  <!-- OPEN GRAPH – prikaz ob deljenju na LinkedIn, WhatsApp itd. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zapisi – Marko Ujc" />
+  <meta property="og:description" content="Zapisi iz prakse — o tremi, nastopanju in prisotnosti. Brez receptov." />
+  <meta property="og:url" content="https://markoujc.com/zapisi/" />
+  <meta property="og:site_name" content="Marko Ujc" />
+  <meta property="og:locale" content="sl_SI" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Zapisi – Marko Ujc" />
+  <meta name="twitter:description" content="Zapisi iz prakse — o tremi, nastopanju in prisotnosti. Brez receptov." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .zapisi-inner { max-width: 800px; margin: 0 auto; padding: 14rem 3.5rem 8rem; }
+    .zapisi-eyebrow { font-size: .63rem; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
+    .zapisi-h1 { font-family: var(--ff-disp); font-size: clamp(4rem, 8vw, 8rem); font-weight: 300; line-height: .9; margin-bottom: 2rem; }
+    .zapisi-h1 em { font-style: italic; color: var(--accent); }
+    .zapisi-sub { font-family: var(--ff-disp); font-size: clamp(1.1rem, 1.8vw, 1.5rem); font-style: italic; font-weight: 300; color: var(--cream-dim); line-height: 1.65; max-width: 52ch; margin-bottom: 4rem; border-left: 2px solid rgba(196,113,74,.25); padding-left: 2rem; }
+
+    .zapisi-capture { background: var(--bg2); border: 1px solid var(--line); padding: 2.5rem 3rem; margin-bottom: 5rem; }
+    .capture-label { font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--cream-dim); margin-bottom: 1.2rem; }
+    .capture-form { display: flex; gap: .8rem; margin-bottom: .8rem; }
+    .capture-input { flex: 1; background: var(--bg3); border: 1px solid var(--line); color: var(--cream); font-family: var(--ff-body); font-size: .9rem; padding: .85rem 1.2rem; border-radius: 2px; outline: none; transition: border-color .2s; }
+    .capture-input:focus { border-color: rgba(196,113,74,.5); }
+    .capture-input::placeholder { color: var(--cream-xs); }
+    .capture-btn { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; background: var(--accent); color: var(--bg); border: none; padding: .85rem 1.8rem; border-radius: 2px; cursor: pointer; font-family: var(--ff-body); transition: background .2s; white-space: nowrap; }
+    .capture-btn:hover { background: var(--accent-lt); }
+    .capture-note { font-size: .72rem; color: var(--cream-xs); font-style: italic; }
+
+    /* Blog zapisi – aktiviraj ko imaš vsebino */
+    .zapis-card { padding: 3rem 0; border-bottom: 1px solid var(--line); }
+    .zapis-datum { font-size: .65rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: .8rem; }
+    .zapis-naslov a { font-family: var(--ff-disp); font-size: clamp(1.5rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--cream); text-decoration: none; line-height: 1.2; transition: color .2s; }
+    .zapis-naslov a:hover { color: var(--accent); }
+    .zapis-excerpt { font-size: .9rem; color: var(--cream-dim); line-height: 1.85; margin: .8rem 0 1.2rem; }
+    .zapis-link { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 960px) {
+      .zapisi-inner { padding: 10rem 1.8rem 5rem; }
+      .capture-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<nav class="site-nav" id="site-nav">
+  <a href="../index.html" class="nav-logo">Marko <span>Ujc</span></a>
+  <ul class="nav-links">
+    <li><a href="../trema/index.html">Trema</a></li>
+    <li><a href="../strenirkaj-nastop/index.html">sTRENIRkAJ</a></li>
+    <li><a href="../uprizoritev/index.html">Uprizoritev</a></li>
+    <li><a href="../o-marku/index.html">O Marku</a></li>
+    <li><a href="../zapisi/index.html" class="active">Zapisi</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
+  <a href="../kontakt/index.html" class="nav-cta">Kontakt</a>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="../trema/index.html">Trema</a>
+  <a href="../strenirkaj-nastop/index.html">sTRENIRkAJ NASTOP</a>
+  <a href="../uprizoritev/index.html">Uprizoritev</a>
+  <a href="../o-marku/index.html">O Marku</a>
+  <a href="../zapisi/index.html" class="active">Zapisi</a>
+  <a href="../kontakt/index.html">Kontakt</a>
+</div>
+
+<div class="zapisi-inner">
+  <p class="zapisi-eyebrow anim-fadeup">Zapisi</p>
+  <h1 class="zapisi-h1 anim-fadeup anim-delay-1"><em>Zapisi</em><br>iz prakse.</h1>
+  <p class="zapisi-sub anim-fadeup anim-delay-2">Kratki zapisi o tremi, nastopanju in prisotnosti. Brez receptov. Samo tisto, kar ostane za izkušnjo.</p>
+
+  <section class="zapisi-capture anim-fadeup anim-delay-3" aria-labelledby="capture-title">
+    <div class="capture-label" id="capture-title">Obvestilo ob novih zapisih</div>
+    <form class="capture-form" action="https://formspree.io/f/TVOJ_FORMSPREE_ID" method="POST">
+      <input type="hidden" name="_subject" value="Prijava na zapise — markoujc.com" />
+      <input class="capture-input" type="email" name="email" placeholder="tvoja e-pošta" autocomplete="email" required />
+      <button class="capture-btn" type="submit">Prijava</button>
+    </form>
+    <p class="capture-note">Prijava bo aktivna po priklopu e-poštnega obrazca.</p>
+  </section>
+
+  <!-- CMS:ZAPISI:START -->
+
+  <article class="zapis-card anim-fadeup anim-delay-3">
+    <div class="zapis-datum">12. maj 2026</div>
+    <h2 class="zapis-naslov"><a href="./kaj-je-trema/">Kaj je trema?</a></h2>
+    <p class="zapis-excerpt">Trema se ne pojavi šele takrat, ko stopiš pred ljudi. Pogosto se začne že prej. V telesu. V dihu. V glasu, ki ga še nisi uporabil, pa že čutiš, da ne bo čisto tvoj. Kaj se zgodi Srčni utrip...</p>
+    <a class="zapis-link" href="./kaj-je-trema/">Preberi zapis -></a>
+  </article>
+
+  <article class="zapis-card anim-fadeup anim-delay-4">
+    <div class="zapis-datum">12. maj 2026</div>
+    <h2 class="zapis-naslov"><a href="./kako-obvladati-tremo/">Kako obvladati tremo?</a></h2>
+    <p class="zapis-excerpt">Večina nasvetov za tremo zveni preprosto. Dihaj. Sprosti se. Misli pozitivno. Vse to lahko pomaga. Ampak pogosto ne takrat, ko si dejansko pred ljudmi. Zakaj nasvet ni dovolj Na odru telo...</p>
+    <a class="zapis-link" href="./kako-obvladati-tremo/">Preberi zapis -></a>
+  </article>
+<!-- CMS:ZAPISI:END -->
+</div>
+
+<footer class="site-footer">
+  <div class="footer-logo">Marko Ujc</div>
+  <ul class="footer-links">
+    <li><a href="../pravno/pogoji.html">Pogoji</a></li>
+    <li><a href="../pravno/zasebnost.html">Zasebnost</a></li>
+    <li><a href="../pravno/piskotki.html">Piškotki</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 markoujc.com</div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

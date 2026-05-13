@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trema - kaj je in kako delati z njo - Marko Ujc</title>
+  <!-- SEO META -->
+  <meta name="description" content="Trema ni napaka. Je odziv telesa na situacijo, ki je pomembna. Nauči se razumeti, kaj se dogaja, in kako s tem delati skozi prakso." />
+  <link rel="canonical" href="https://markoujc.com/trema/" />
+
+  <!-- FAVICON – temno ozadje, terracotta M -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b09'/><text y='.88em' font-size='68' font-family='Georgia,serif' fill='%23c4714a' font-style='italic' x='8'>M</text></svg>" />
+
+  <!-- OPEN GRAPH – prikaz ob deljenju na LinkedIn, WhatsApp itd. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trema - kaj je in kako delati z njo - Marko Ujc" />
+  <meta property="og:description" content="Trema ni napaka. Je odziv telesa na situacijo, ki je pomembna. Nauči se razumeti, kaj se dogaja, in kako s tem delati skozi prakso." />
+  <meta property="og:url" content="https://markoujc.com/trema/" />
+  <meta property="og:site_name" content="Marko Ujc" />
+  <meta property="og:locale" content="sl_SI" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Trema - kaj je in kako delati z njo - Marko Ujc" />
+  <meta name="twitter:description" content="Trema ni napaka. Je odziv telesa na situacijo, ki je pomembna. Nauči se razumeti, kaj se dogaja, in kako s tem delati skozi prakso." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0c0b09;
+      --bg2:       #111009;
+      --bg3:       #161410;
+      --cream:     #e8e0d0;
+      --cream-dim: #9e9488;
+      --cream-xs:  #5a554e;
+      --accent:    #c4714a;
+      --accent-lt: #d4895e;
+      --line:      rgba(232,224,208,.09);
+      --ff-disp:   'Cormorant Garamond', Georgia, serif;
+      --ff-body:   'Syne', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      opacity: .028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color .4s, background .4s, backdrop-filter .4s;
+    }
+    nav.scrolled {
+      border-color: var(--line);
+      background: rgba(12,11,9,.88);
+      backdrop-filter: blur(18px);
+    }
+    .nav-logo {
+      font-family: var(--ff-disp);
+      font-size: 1.2rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--cream); text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--cream-dim); text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--cream); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
+      border: 1px solid rgba(196,113,74,.3);
+      padding: .55rem 1.5rem; border-radius: 2px;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      position: relative; z-index: 1;
+      padding: 8rem 3.5rem 0;
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .breadcrumb a {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream-xs); text-decoration: none;
+      transition: color .2s;
+    }
+    .breadcrumb a:hover { color: var(--cream-dim); }
+    .breadcrumb-sep { color: var(--cream-xs); font-size: .62rem; }
+    .breadcrumb-current {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 4rem 3.5rem 0;
+      overflow: hidden;
+    }
+
+    .hero-bg-char {
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(20rem, 40vw, 50rem);
+      font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.035);
+      top: -4rem; right: -4rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.04em; line-height: 1;
+    }
+
+    .hero-inner {
+      max-width: 1340px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end;
+      padding-bottom: 7rem;
+    }
+
+    .hero-eyebrow {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp .7s .1s forwards;
+    }
+
+    .hero-h1 {
+      font-family: var(--ff-disp);
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      font-weight: 300; line-height: .92;
+      letter-spacing: -.02em;
+      opacity: 0; animation: fadeUp .9s .25s forwards;
+    }
+    .hero-h1 em { font-style: italic; color: var(--accent); }
+
+    .hero-right {
+      opacity: 0; animation: fadeUp .9s .5s forwards;
+      padding-bottom: .5rem;
+    }
+
+    .hero-intro {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.3rem, 2vw, 1.75rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.5; color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-body {
+      font-size: .9rem; line-height: 1.95;
+      color: var(--cream-dim); max-width: 44ch;
+    }
+
+    /* ── PROGRESS NAV ── */
+    .progress-nav {
+      position: relative; z-index: 1;
+      background: var(--bg2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .progress-nav-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 0 3.5rem;
+      display: flex;
+    }
+    .pnav-item {
+      flex: 1;
+      padding: 1.6rem 0;
+      font-size: .62rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream-xs);
+      text-decoration: none;
+      border-right: 1px solid var(--line);
+      display: flex; align-items: center; gap: .8rem;
+      transition: color .2s, background .2s;
+      padding-left: 1.5rem;
+    }
+    .pnav-item:last-child { border-right: none; }
+    .pnav-item:hover { color: var(--cream-dim); background: rgba(196,113,74,.03); }
+    .pnav-num {
+      font-family: var(--ff-disp);
+      font-size: 1.1rem; font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.3);
+    }
+
+    /* ── SECTION SHARED ── */
+    section { position: relative; z-index: 1; }
+
+    .section-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 7rem 3.5rem;
+    }
+
+    .section-label {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2rem;
+    }
+
+    /* ── KAJ JE TREMA ── */
+    .kaj-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid; grid-template-columns: 4fr 5fr;
+      gap: 7rem; align-items: start;
+    }
+
+    .kaj-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.8rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.0;
+      margin-bottom: 1.5rem;
+      position: sticky; top: 7rem;
+    }
+    .kaj-headline em { font-style: italic; color: var(--accent); }
+
+    .kaj-right { }
+
+    .kaj-opening {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.3rem, 2vw, 1.6rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.5; color: var(--cream);
+      margin-bottom: 3rem;
+    }
+
+    .kaj-signals {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 1px;
+      margin-bottom: 3rem;
+    }
+
+    .kaj-signal {
+      display: flex; align-items: center; gap: 1.5rem;
+      padding: 1.3rem 1.6rem;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-bottom: none;
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream);
+      transition: background .2s, color .2s;
+    }
+    .kaj-signal:last-child { border-bottom: 1px solid var(--line); }
+    .kaj-signal:hover { background: rgba(196,113,74,.06); }
+    .kaj-signal-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+    }
+
+    .kaj-conclusion {
+      font-size: .9rem; line-height: 1.95;
+      color: var(--cream-dim);
+    }
+    .kaj-conclusion strong {
+      color: var(--cream); font-weight: 600;
+    }
+
+    /* ── KAKO SE KAŽE ── */
+    .kaze {
+      background: var(--bg3);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .kaze-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+    }
+    .kaze-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; margin-bottom: 5rem; align-items: end;
+    }
+    .kaze-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+    }
+    .kaze-headline em { font-style: italic; color: var(--accent); }
+    .kaze-intro {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+      font-style: italic; font-weight: 300;
+      line-height: 1.55; color: var(--cream-dim);
+    }
+
+    .kaze-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .kaze-card {
+      background: var(--bg3);
+      padding: 2.5rem 2rem;
+      transition: background .3s;
+    }
+    .kaze-card:hover { background: rgba(196,113,74,.05); }
+    .kaze-card-icon {
+      font-family: var(--ff-disp);
+      font-size: 2.5rem; font-style: italic; font-weight: 300;
+      color: rgba(196,113,74,.3); line-height: 1;
+      margin-bottom: 1.2rem;
+    }
+    .kaze-card-title {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.2rem;
+    }
+    .kaze-card-items {
+      list-style: none;
+      display: flex; flex-direction: column; gap: .5rem;
+    }
+    .kaze-card-item {
+      font-family: var(--ff-disp);
+      font-size: 1rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.4;
+      padding-left: .8rem;
+      border-left: 1px solid rgba(196,113,74,.2);
+    }
+
+    .kaze-footer {
+      margin-top: 4rem;
+      padding: 2rem 2.5rem;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .kaze-footer-line {
+      width: 40px; height: 1px;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .kaze-footer-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream);
+    }
+
+    /* ── KAJ NE DELUJE ── */
+    .nedeluje-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 7rem; align-items: start;
+    }
+    .nedeluje-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+    .nedeluje-headline em { font-style: italic; color: var(--accent); }
+    .nedeluje-desc {
+      font-size: .9rem; color: var(--cream-dim);
+      line-height: 1.9; margin-bottom: 3rem;
+    }
+    .nedeluje-verdict {
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.55; color: var(--cream-dim);
+      border-left: 2px solid rgba(196,113,74,.25);
+      padding-left: 1.8rem;
+    }
+
+    .nedeluje-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .nedeluje-item {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-bottom: none;
+      padding: 1.6rem 2rem;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      transition: background .25s;
+    }
+    .nedeluje-item:last-child { border-bottom: 1px solid var(--line); }
+    .nedeluje-item:hover { background: rgba(196,113,74,.04); }
+    .nedeluje-x {
+      font-family: var(--ff-disp);
+      font-size: 1.5rem; font-weight: 300;
+      color: rgba(196,113,74,.35); flex-shrink: 0;
+      line-height: 1.3;
+    }
+    .nedeluje-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.5;
+    }
+
+    /* ── KAJ DELUJE ── */
+    .deluje {
+      background: var(--bg2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .deluje-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+    }
+    .deluje-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; margin-bottom: 5rem; align-items: end;
+    }
+    .deluje-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.0;
+    }
+    .deluje-headline em { font-style: italic; color: var(--accent); }
+    .deluje-intro {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .deluje-intro strong { color: var(--cream); font-weight: 600; }
+
+    .deluje-process {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 4rem;
+    }
+    .deluje-step {
+      background: var(--bg2);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: background .3s;
+    }
+    .deluje-step:hover { background: rgba(196,113,74,.05); }
+    .deluje-step-num {
+      font-family: var(--ff-disp);
+      font-size: 4rem; font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.15); line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .deluje-step-name {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      color: var(--cream); margin-bottom: .6rem;
+    }
+    .deluje-step-desc {
+      font-family: var(--ff-disp);
+      font-size: 1rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.55;
+    }
+
+    .deluje-closing {
+      display: flex; align-items: center; gap: 3rem;
+      padding: 2.5rem;
+      background: var(--bg3);
+      border: 1px solid var(--line);
+    }
+    .deluje-closing-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-style: italic; font-weight: 300;
+      line-height: 1.4; color: var(--cream);
+      flex: 1;
+    }
+    .deluje-closing-text strong {
+      font-style: normal; color: var(--accent); font-weight: 400;
+    }
+    .deluje-closing-sep {
+      width: 1px; height: 60px;
+      background: var(--line); flex-shrink: 0;
+    }
+    .deluje-closing-sub {
+      font-size: .8rem; color: var(--cream-dim);
+      line-height: 1.7; max-width: 28ch;
+    }
+
+    /* ── KAM NAPREJ ── */
+    .naprej {
+      position: relative; overflow: hidden;
+    }
+    .naprej::before {
+      content: '→';
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(18rem, 35vw, 42rem);
+      font-weight: 300;
+      color: rgba(196,113,74,.03);
+      bottom: -5rem; right: -3rem;
+      pointer-events: none; user-select: none;
+      line-height: 1;
+    }
+    .naprej-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      position: relative; z-index: 1;
+    }
+    .naprej-header {
+      max-width: 56ch; margin-bottom: 5rem;
+    }
+    .naprej-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+    .naprej-headline em { font-style: italic; color: var(--accent); }
+    .naprej-desc {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+
+    .naprej-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .naprej-card {
+      background: var(--bg);
+      padding: 3rem 2.5rem;
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      transition: background .3s;
+      position: relative; overflow: hidden;
+    }
+    .naprej-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .35s;
+    }
+    .naprej-card:hover { background: rgba(196,113,74,.05); }
+    .naprej-card:hover::after { transform: scaleX(1); }
+    .naprej-card-label {
+      font-size: .62rem; font-weight: 700;
+      letter-spacing: .25em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem;
+    }
+    .naprej-card-title {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      font-weight: 400; line-height: 1.15;
+      margin-bottom: 1rem; flex: 1;
+    }
+    .naprej-card-desc {
+      font-size: .82rem; color: var(--cream-dim);
+      line-height: 1.7; margin-bottom: 2rem;
+    }
+    .naprej-card-link {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--line);
+      padding: 3rem 3.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: var(--ff-disp);
+      font-size: .95rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--cream-dim);
+    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cream-xs); text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--cream-dim); }
+    .footer-copy { font-size: .62rem; color: rgba(90,85,78,.5); letter-spacing: .1em; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .rd1 { transition-delay: .1s; }
+    .rd2 { transition-delay: .2s; }
+    .rd3 { transition-delay: .3s; }
+    .rd4 { transition-delay: .4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 1.2rem 1.8rem; }
+      .nav-links { display: none; }
+      .breadcrumb { padding: 7rem 1.8rem 0; }
+      .hero { padding: 3rem 1.8rem 0; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 4rem; }
+      .progress-nav-inner { padding: 0 1.8rem; overflow-x: auto; }
+      .pnav-item { padding-left: 1rem; white-space: nowrap; }
+      .kaj-inner { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.8rem; }
+      .kaj-headline { position: static; }
+      .kaze-inner { padding: 5rem 1.8rem; }
+      .kaze-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+      .kaze-grid { grid-template-columns: 1fr 1fr; }
+      .nedeluje-inner { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.8rem; }
+      .deluje-inner { padding: 5rem 1.8rem; }
+      .deluje-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+      .deluje-process { grid-template-columns: 1fr 1fr; }
+      .deluje-closing { flex-direction: column; gap: 1.5rem; }
+      .deluje-closing-sep { width: 60px; height: 1px; }
+      .naprej-inner { padding: 5rem 1.8rem; }
+      .naprej-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 1.8rem; }
+    }
+    @media (max-width: 560px) {
+      .kaze-grid { grid-template-columns: 1fr; }
+      .deluje-process { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="site-nav">
+  <a href="../index.html" class="nav-logo">Marko <span>Ujc</span></a>
+  <ul class="nav-links">
+    <li><a href="../trema/index.html" class="active">Trema</a></li>
+    <li><a href="../strenirkaj-nastop/index.html">sTRENIRkAJ</a></li>
+    <li><a href="../uprizoritev/index.html">Uprizoritev</a></li>
+    <li><a href="../o-marku/index.html">O Marku</a></li>
+    <li><a href="../zapisi/index.html">Zapisi</a></li>
+  </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
+  <a href="../kontakt/index.html" class="nav-cta">Kontakt</a>
+</nav>
+
+<!-- MOBILNI MENI – se odpre ob kliku hamburgerja -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="../trema/index.html">Trema</a>
+  <a href="../strenirkaj-nastop/index.html">sTRENIRkAJ NASTOP</a>
+  <a href="../uprizoritev/index.html">Uprizoritev</a>
+  <a href="../o-marku/index.html">O Marku</a>
+  <a href="../zapisi/index.html">Zapisi</a>
+  <a href="../kontakt/index.html">Kontakt</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../index.html">markoujc.com</a>
+  <span class="breadcrumb-sep">·</span>
+  <span class="breadcrumb-current">Trema</span>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-char" aria-hidden="true">T</div>
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Trema</p>
+      <h1 class="hero-h1">Trema ni težava. Je <em>signal.</em></h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-intro">Telo se odzove, ker je situacija pomembna. Vprašanje ni, kako tremo odstraniti. Vprašanje je, kako ostati prisoten, ko se pojavi.</p>
+      <p class="hero-body">sTRENIRkAJ NASTOP je 8-tedenski program za delo s tremo skozi telo, glas, prisotnost in realne situacije.</p>
+    </div>
+  </div>
+</header>
+
+<!-- PROGRESS NAV -->
+<nav class="progress-nav" aria-label="Vsebina strani">
+  <div class="progress-nav-inner">
+      <a href="#kaj-je" class="pnav-item">
+        <span class="pnav-num">1.</span> Kaj je trema
+      </a>
+      <a href="#zakaj-nastane" class="pnav-item">
+        <span class="pnav-num">2.</span> Zakaj nastane
+      </a>
+      <a href="#kaj-ne-deluje" class="pnav-item">
+        <span class="pnav-num">3.</span> Kaj ne deluje
+      </a>
+      <a href="#kako-delati" class="pnav-item">
+        <span class="pnav-num">4.</span> Kako delati z njo
+      </a>
+  </div>
+</nav>
+
+<!-- MOBILNI MENI – se odpre ob kliku hamburgerja -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="../trema/index.html">Trema</a>
+  <a href="../strenirkaj-nastop/index.html">sTRENIRkAJ NASTOP</a>
+  <a href="../uprizoritev/index.html">Uprizoritev</a>
+  <a href="../o-marku/index.html">O Marku</a>
+  <a href="../zapisi/index.html">Zapisi</a>
+  <a href="../kontakt/index.html">Kontakt</a>
+</div>
+
+<!-- I. KAJ JE TREMA -->
+<section id="kaj-je">
+  <div class="kaj-inner">
+    <div>
+      <p class="section-label reveal">I.</p>
+      <h2 class="kaj-headline reveal rd1">Kaj je<br><em>trema</em></h2>
+    </div>
+    <div class="kaj-right">
+      <p class="kaj-opening reveal">Srčni utrip se poveča. Dihanje se spremeni. Pozornost se zoži. Glas se lahko dvigne, umakne ali pospeši.</p>
+      <ul class="kaj-signals reveal rd1">
+        <li class="kaj-signal"><span class="kaj-signal-dot"></span>Srčni utrip se poveča.</li>
+        <li class="kaj-signal"><span class="kaj-signal-dot"></span>Dihanje se spremeni.</li>
+        <li class="kaj-signal"><span class="kaj-signal-dot"></span>Pozornost se zoži.</li>
+        <li class="kaj-signal"><span class="kaj-signal-dot"></span>Telo se pripravi.</li>
+      </ul>
+      <p class="kaj-conclusion reveal rd2">
+        <strong>Trema je telesni odziv, ne osebna napaka.</strong><br><br>
+        To ni dokaz, da nisi sposoben. To je dokaz, da telo situacijo bere kot pomembno.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- II. KAKO SE KAŽE -->
+<section id="zakaj-nastane" class="kaze">
+  <div class="kaze-inner">
+    <div class="kaze-header">
+      <div>
+        <p class="section-label reveal">II.</p>
+        <h2 class="kaze-headline reveal rd1">Kako se<br><em>kaže</em></h2>
+      </div>
+      <p class="kaze-intro reveal rd2">Trema se ne kaže enako pri vseh. Isto stanje, različni obrazi. Prepoznaj svojega.</p>
+    </div>
+
+    <div class="kaze-grid">
+      <div class="kaze-card reveal">
+        <div class="kaze-card-icon">↗</div>
+        <div class="kaze-card-title">Telo</div>
+        <ul class="kaze-card-items">
+          <li class="kaze-card-item">napetost v mišicah</li>
+          <li class="kaze-card-item">tresenje</li>
+          <li class="kaze-card-item">suha usta</li>
+          <li class="kaze-card-item">pospešen utrip</li>
+        </ul>
+      </div>
+      <div class="kaze-card reveal rd1">
+        <div class="kaze-card-icon">◎</div>
+        <div class="kaze-card-title">Glas</div>
+        <ul class="kaze-card-items">
+          <li class="kaze-card-item">prehiter govor</li>
+          <li class="kaze-card-item">izguba kontrole</li>
+          <li class="kaze-card-item">tih ali previsok</li>
+          <li class="kaze-card-item">tresenje glasu</li>
+        </ul>
+      </div>
+      <div class="kaze-card reveal rd2">
+        <div class="kaze-card-icon">∿</div>
+        <div class="kaze-card-title">Misli</div>
+        <ul class="kaze-card-items">
+          <li class="kaze-card-item">„kaj če zablokiram"</li>
+          <li class="kaze-card-item">„kaj si bodo mislili"</li>
+          <li class="kaze-card-item">tunelski vid</li>
+          <li class="kaze-card-item">praznina v glavi</li>
+        </ul>
+      </div>
+      <div class="kaze-card reveal rd3">
+        <div class="kaze-card-icon">⟲</div>
+        <div class="kaze-card-title">Vedenje</div>
+        <ul class="kaze-card-items">
+          <li class="kaze-card-item">izogibanje nastopom</li>
+          <li class="kaze-card-item">pretirana kontrola</li>
+          <li class="kaze-card-item">otrdelost na odru</li>
+          <li class="kaze-card-item">umik v tekst</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kaze-footer reveal">
+      <div class="kaze-footer-line"></div>
+      <p class="kaze-footer-text">Če se prepoznaš v tem — nisi izjema. Si človek, ki mu je mar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- III. KAJ NE DELUJE -->
+<section id="kaj-ne-deluje">
+  <div class="nedeluje-inner">
+    <div>
+      <p class="section-label reveal">III.</p>
+      <h2 class="nedeluje-headline reveal rd1">Kaj ne<br><em>deluje</em></h2>
+      <p class="nedeluje-desc reveal rd2">Veliko ljudi poskuša tremo rešiti z razlago, pozitivnimi stavki ali nasveti.</p>
+      <p class="nedeluje-verdict reveal rd3">Na odru pa se pokaže, kaj je telo dejansko izkusilo. Kar ni bilo preizkušeno v prostoru, pod pogledom drugih, se hitro sesuje.</p>
+    </div>
+    <ul class="nedeluje-list reveal rd1">
+      <li class="nedeluje-item">
+        <span class="nedeluje-x">×</span>
+        <span class="nedeluje-text">„Samo bodi samozavesten" — samozavest ni stikalo.</span>
+      </li>
+      <li class="nedeluje-item">
+        <span class="nedeluje-x">×</span>
+        <span class="nedeluje-text">Dihalne tehnike brez prakse — delujejo v sobi, ne pred ljudmi.</span>
+      </li>
+      <li class="nedeluje-item">
+        <span class="nedeluje-x">×</span>
+        <span class="nedeluje-text">Pozitivno razmišljanje brez telesa — glava sama ne zmore.</span>
+      </li>
+      <li class="nedeluje-item">
+        <span class="nedeluje-x">×</span>
+        <span class="nedeluje-text">Izogibanje nastopom — trema naraste, ne izgine.</span>
+      </li>
+      <li class="nedeluje-item">
+        <span class="nedeluje-x">×</span>
+        <span class="nedeluje-text">Pretirano branje o tremi — razumevanje ni enako izkušnji.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- IV. KAJ DELUJE -->
+<section id="kako-delati" class="deluje">
+  <div class="deluje-inner">
+    <div class="deluje-header">
+      <div>
+        <p class="section-label reveal">IV.</p>
+        <h2 class="deluje-headline reveal rd1">Trema se<br>ne odpravi.<br><em>Trenira se.</em></h2>
+      </div>
+      <p class="deluje-intro reveal rd2">
+        <strong>Trema se trenira skozi izpostavljanje.</strong> Majhni nastopi. Varni prostori. Napaka kot del procesa. Ponovitev. Cilj ni popoln nastop. Cilj je, da lahko ostaneš v prostoru, tudi ko ni udobno.
+      </p>
+    </div>
+
+    <div class="deluje-process">
+      <div class="deluje-step reveal">
+        <div class="deluje-step-num">1.</div>
+        <div class="deluje-step-name">Prisotnost v telesu</div>
+        <p class="deluje-step-desc">Začneš opazovati, kaj se dogaja — brez obsojanja.</p>
+      </div>
+      <div class="deluje-step reveal rd1">
+        <div class="deluje-step-num">2.</div>
+        <div class="deluje-step-name">Postopna izpostavljenost</div>
+        <p class="deluje-step-desc">Mali nastopi. Varni prostori. Korak za korakom.</p>
+      </div>
+      <div class="deluje-step reveal rd2">
+        <div class="deluje-step-num">3.</div>
+        <div class="deluje-step-name">Varen prostor za napako</div>
+        <p class="deluje-step-desc">Napaka ni poraz. Je del procesa, ki te gradi.</p>
+      </div>
+      <div class="deluje-step reveal rd3">
+        <div class="deluje-step-num">4.</div>
+        <div class="deluje-step-name">Ponavljanje realnih situacij</div>
+        <p class="deluje-step-desc">Telo se uči skozi izkušnjo. Ne skozi teorijo.</p>
+      </div>
+    </div>
+
+    <div class="deluje-closing reveal rd2">
+      <p class="deluje-closing-text">To ni <strong>hitra rešitev.</strong><br>Je proces.</p>
+      <div class="deluje-closing-sep"></div>
+      <p class="deluje-closing-sub">Ne iščemo popolnosti. Iščemo funkcionalnost — sposobnost stati pred ljudmi in ostati prisoten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- V. KAM NAPREJ -->
+<section id="kam-naprej" class="naprej">
+  <div class="naprej-inner">
+    <div class="naprej-header">
+      <p class="section-label reveal">V.</p>
+      <h2 class="naprej-headline reveal rd1">Če želiš<br>s tem <em>delati</em> —</h2>
+      <p class="naprej-desc reveal rd2">sTRENIRkAJ NASTOP je 8-tedenski program za delo s tremo skozi telo, glas, prisotnost in realne situacije.</p>
+    </div>
+
+    <div class="naprej-grid">
+      <a href="../strenirkaj-nastop/index.html" class="naprej-card reveal">
+        <div class="naprej-card-label">Flagship program</div>
+        <div class="naprej-card-title">sTRENIRkAJ NASTOP</div>
+        <p class="naprej-card-desc">8 tednov. Skupinsko in individualno. Realne situacije, neposreden feedback. Trening, ne tečaj.</p>
+        <div class="naprej-card-link">Razišči program →</div>
+      </a>
+      <a href="../kontakt/index.html" class="naprej-card reveal rd1">
+        <div class="naprej-card-label">1 : 1</div>
+        <div class="naprej-card-title">Individualno delo</div>
+        <p class="naprej-card-desc">Prilagojeno tebi. Tempo, fokus in pristop, ki ustreza tvojemu profilu in ciljem.</p>
+        <div class="naprej-card-link">Izvedi več →</div>
+      </a>
+      <a href="../kontakt/index.html" class="naprej-card reveal rd2">
+        <div class="naprej-card-label">Skupinsko</div>
+        <div class="naprej-card-title">Praktični treningi</div>
+        <p class="naprej-card-desc">Enkratne delavnice, intenzivi in skupinska srečanja. Za posameznike in ekipe.</p>
+        <div class="naprej-card-link">Poglej delavnice →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Marko Ujc</div>
+  <ul class="footer-links">
+    <li><a href="../pravno/pogoji.html">Pogoji</a></li>
+    <li><a href="../pravno/zasebnost.html">Zasebnost</a></li>
+    <li><a href="../pravno/piskotki.html">Piškotki</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 markoujc.com</div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

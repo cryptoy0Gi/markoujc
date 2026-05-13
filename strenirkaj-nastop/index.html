@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sTRENIRkAJ NASTOP - program za tremo skozi prakso - Marko Ujc</title>
+  <!-- SEO META -->
+  <meta name="description" content="8-tedenski praktični program za ljudi, ki jih trema ustavi pred nastopom, predstavitvijo ali govorom." />
+  <link rel="canonical" href="https://markoujc.com/strenirkaj-nastop/" />
+
+  <!-- FAVICON – temno ozadje, terracotta M -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230c0b09'/><text y='.88em' font-size='68' font-family='Georgia,serif' fill='%23c4714a' font-style='italic' x='8'>M</text></svg>" />
+
+  <!-- OPEN GRAPH – prikaz ob deljenju na LinkedIn, WhatsApp itd. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="sTRENIRkAJ NASTOP - program za tremo skozi prakso - Marko Ujc" />
+  <meta property="og:description" content="8-tedenski praktični program za ljudi, ki jih trema ustavi pred nastopom, predstavitvijo ali govorom." />
+  <meta property="og:url" content="https://markoujc.com/strenirkaj-nastop/" />
+  <meta property="og:site_name" content="Marko Ujc" />
+  <meta property="og:locale" content="sl_SI" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="sTRENIRkAJ NASTOP - program za tremo skozi prakso - Marko Ujc" />
+  <meta name="twitter:description" content="8-tedenski praktični program za ljudi, ki jih trema ustavi pred nastopom, predstavitvijo ali govorom." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0c0b09;
+      --bg2:       #111009;
+      --bg3:       #161410;
+      --cream:     #e8e0d0;
+      --cream-dim: #9e9488;
+      --cream-xs:  #5a554e;
+      --accent:    #c4714a;
+      --accent-lt: #d4895e;
+      --line:      rgba(232,224,208,.09);
+      --ff-disp:   'Cormorant Garamond', Georgia, serif;
+      --ff-body:   'Syne', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      opacity: .028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.5rem 3.5rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color .4s, background .4s, backdrop-filter .4s;
+    }
+    nav.scrolled {
+      border-color: var(--line);
+      background: rgba(12,11,9,.88);
+      backdrop-filter: blur(18px);
+    }
+    .nav-logo {
+      font-family: var(--ff-disp);
+      font-size: 1.2rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--cream); text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--cream-dim); text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
+      border: 1px solid rgba(196,113,74,.3);
+      padding: .55rem 1.5rem; border-radius: 2px;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .nav-cta:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-block;
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--bg); background: var(--accent);
+      text-decoration: none;
+      padding: 1rem 2.4rem; border-radius: 2px;
+      transition: background .2s, transform .2s;
+    }
+    .btn-primary:hover { background: var(--accent-lt); transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-block;
+      font-size: .7rem; font-weight: 600;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream-dim); text-decoration: none;
+      transition: color .2s;
+    }
+    .btn-ghost:hover { color: var(--cream); }
+    .btn-ghost::after { content: ' →'; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      position: relative; z-index: 1;
+      padding: 8rem 3.5rem 0;
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .breadcrumb a {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream-xs); text-decoration: none; transition: color .2s;
+    }
+    .breadcrumb a:hover { color: var(--cream-dim); }
+    .breadcrumb-sep { color: var(--cream-xs); font-size: .62rem; }
+    .breadcrumb-current {
+      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 4rem 3.5rem 0;
+      overflow: hidden;
+      min-height: 90svh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+    }
+    .hero-bg-word {
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(12rem, 26vw, 32rem);
+      font-weight: 300;
+      color: rgba(196,113,74,.035);
+      bottom: -2rem; right: -3rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.05em; line-height: 1;
+      white-space: nowrap;
+    }
+    .hero-inner {
+      max-width: 1340px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end;
+      padding-bottom: 7rem;
+    }
+    .hero-left { }
+    .hero-eyebrow {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp .7s .1s forwards;
+    }
+    .hero-h1 {
+      font-family: var(--ff-disp);
+      font-size: clamp(3rem, 7vw, 7.5rem);
+      font-weight: 300; line-height: .9;
+      letter-spacing: -.02em;
+      opacity: 0; animation: fadeUp .9s .25s forwards;
+    }
+    .hero-h1 em { font-style: italic; color: var(--accent); }
+    .hero-h1 .small {
+      font-size: clamp(1.8rem, 4vw, 4.5rem);
+      display: block; margin-top: .3em;
+    }
+    .hero-right {
+      opacity: 0; animation: fadeUp .9s .5s forwards;
+      padding-bottom: .5rem;
+    }
+    .hero-intro {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.3rem, 2vw, 1.75rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.5; color: var(--cream);
+      margin-bottom: 1.8rem;
+    }
+    .hero-body {
+      font-size: .9rem; line-height: 1.95;
+      color: var(--cream-dim); max-width: 42ch;
+      margin-bottom: 2.8rem;
+    }
+    .hero-actions { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+
+    /* ── STATS BAR ── */
+    .statsbar {
+      position: relative; z-index: 1;
+      background: var(--accent);
+    }
+    .statsbar-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 0 3.5rem;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+    .stat {
+      padding: 2.2rem 0;
+      border-right: 1px solid rgba(0,0,0,.12);
+      padding-left: 2.5rem;
+      transition: background .2s;
+    }
+    .stat:first-child { padding-left: 0; }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--ff-disp);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300; line-height: 1;
+      color: var(--bg); margin-bottom: .2rem;
+    }
+    .stat-label {
+      font-size: .65rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(12,11,9,.55);
+    }
+
+    /* ── KAJ JE TO ── */
+    .kajje {
+      position: relative; z-index: 1;
+    }
+    .kajje-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid; grid-template-columns: 4fr 5fr;
+      gap: 8rem; align-items: start;
+    }
+    .section-label {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2rem;
+    }
+    .kajje-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.8rem);
+      font-weight: 300; line-height: 1.0;
+      position: sticky; top: 7rem;
+    }
+    .kajje-headline em { font-style: italic; color: var(--accent); }
+    .kajje-right { }
+    .kajje-opening {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      font-style: italic; font-weight: 300;
+      line-height: 1.55; color: var(--cream);
+      margin-bottom: 2.5rem;
+    }
+    .kajje-distinctions {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 1px;
+      margin-bottom: 3rem;
+    }
+    .kajje-dist {
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-bottom: none;
+    }
+    .kajje-dist:last-child { border-bottom: 1px solid var(--line); }
+    .kajje-dist-no {
+      padding: 1.2rem 1.5rem;
+      border-right: 1px solid var(--line);
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream-xs);
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .kajje-dist-no::before {
+      content: '×';
+      color: rgba(196,113,74,.3); flex-shrink: 0;
+    }
+    .kajje-dist-yes {
+      padding: 1.2rem 1.5rem;
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream);
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .kajje-dist-yes::before {
+      content: '→';
+      color: var(--accent); flex-shrink: 0;
+    }
+    .kajje-body {
+      font-size: .9rem; line-height: 1.95;
+      color: var(--cream-dim);
+    }
+    .kajje-body strong { color: var(--cream); font-weight: 600; }
+
+    /* ── KOMU ── */
+    .komu {
+      position: relative; z-index: 1;
+      background: var(--bg3);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .komu-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 7rem; align-items: center;
+    }
+    .komu-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+    .komu-headline em { font-style: italic; color: var(--accent); }
+    .komu-desc {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .komu-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .komu-card {
+      background: var(--bg3);
+      padding: 2rem 1.8rem;
+      transition: background .25s;
+    }
+    .komu-card:hover { background: rgba(196,113,74,.05); }
+    .komu-card-title {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cream); margin-bottom: .5rem;
+    }
+    .komu-card-desc {
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.55;
+    }
+
+    /* ── KAKO DELAMO ── */
+    .kako {
+      position: relative; z-index: 1;
+    }
+    .kako-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+    }
+    .kako-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: end;
+      margin-bottom: 5rem;
+    }
+    .kako-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.0;
+    }
+    .kako-headline em { font-style: italic; color: var(--accent); }
+    .kako-intro {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .kako-intro strong { color: var(--cream); font-weight: 600; }
+
+    .kako-steps {
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 3rem;
+    }
+    .kako-step {
+      background: var(--bg);
+      padding: 2.5rem 1.8rem;
+      display: flex; flex-direction: column;
+      transition: background .3s;
+      position: relative;
+    }
+    .kako-step:hover { background: rgba(196,113,74,.05); }
+    .kako-step::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s;
+    }
+    .kako-step:hover::after { transform: scaleX(1); }
+    .kako-step-num {
+      font-family: var(--ff-disp);
+      font-size: 3rem; font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.15); line-height: 1;
+      margin-bottom: 1.2rem;
+    }
+    .kako-step-name {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      color: var(--cream); margin-bottom: .6rem;
+    }
+    .kako-step-desc {
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.6;
+      flex: 1;
+    }
+
+    .kako-note {
+      padding: 2rem 2.5rem;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .kako-note-line {
+      width: 36px; height: 1px;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .kako-note-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.5;
+    }
+    .kako-note-text strong { color: var(--cream); font-style: normal; font-weight: 400; }
+
+    /* ── OBLIKE SODELOVANJA ── */
+    .oblike {
+      position: relative; z-index: 1;
+      background: var(--bg2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .oblike-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+    }
+    .oblike-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end;
+      margin-bottom: 5rem;
+    }
+    .oblike-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+    }
+    .oblike-headline em { font-style: italic; color: var(--accent); }
+    .oblike-intro {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .oblike-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 4rem;
+    }
+    .oblike-card {
+      background: var(--bg2);
+      padding: 3rem 2.5rem;
+      display: flex; flex-direction: column;
+      transition: background .3s;
+      text-decoration: none; color: inherit;
+      position: relative; overflow: hidden;
+    }
+    .oblike-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .35s;
+    }
+    .oblike-card:hover { background: rgba(196,113,74,.05); }
+    .oblike-card:hover::before { transform: scaleX(1); }
+    .oblike-card-icon {
+      font-family: var(--ff-disp);
+      font-size: 3rem; font-weight: 300; font-style: italic;
+      color: rgba(196,113,74,.2); line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .oblike-card-title {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--cream); margin-bottom: .8rem;
+    }
+    .oblike-card-desc {
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.6;
+      flex: 1; margin-bottom: 2rem;
+    }
+    .oblike-card-link {
+      font-size: .68rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .oblike-cta {
+      text-align: center;
+      padding: 4rem 2rem;
+      border: 1px solid var(--line);
+      background: var(--bg3);
+    }
+    .oblike-cta-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream); margin-bottom: 2rem;
+      line-height: 1.4;
+    }
+
+    /* ── STRUKTURA PROGRAMA ── */
+    .program-structure {
+      position: relative; z-index: 1;
+      background: var(--bg2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .program-structure-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      display: grid; grid-template-columns: 4fr 6fr;
+      gap: 6rem; align-items: start;
+    }
+    .program-structure-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.4rem, 4.4vw, 4.8rem);
+      font-weight: 300; line-height: 1.02;
+      position: sticky; top: 7rem;
+    }
+    .program-structure-headline em { font-style: italic; color: var(--accent); }
+    .program-structure-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .program-structure-card {
+      border: 1px solid var(--line);
+      background: rgba(12,11,9,.32);
+      padding: 2rem;
+      min-height: 17rem;
+    }
+    .program-structure-weeks {
+      font-size: .62rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.2rem;
+    }
+    .program-structure-card h3 {
+      font-family: var(--ff-disp);
+      font-size: 2rem; font-weight: 300;
+      color: var(--cream); margin-bottom: 1.2rem;
+    }
+    .program-structure-card ul { list-style: none; display: grid; gap: .6rem; }
+    .program-structure-card li {
+      font-size: .86rem; line-height: 1.65;
+      color: var(--cream-dim);
+      padding-left: 1.1rem; position: relative;
+    }
+    .program-structure-card li::before {
+      content: ''; position: absolute; left: 0; top: .72em;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ── KAJ PRIČAKOVATI ── */
+    .pricakuj {
+      position: relative; z-index: 1;
+      overflow: hidden;
+    }
+    .pricakuj::before {
+      content: '✓';
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(20rem, 40vw, 50rem);
+      font-weight: 300;
+      color: rgba(196,113,74,.025);
+      bottom: -5rem; right: -4rem;
+      pointer-events: none; user-select: none;
+      line-height: 1;
+    }
+    .pricakuj-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      position: relative; z-index: 1;
+    }
+    .pricakuj-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: end;
+      margin-bottom: 5rem;
+    }
+    .pricakuj-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 300; line-height: 1.05;
+    }
+    .pricakuj-headline em { font-style: italic; color: var(--accent); }
+    .pricakuj-intro {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .pricakuj-intro strong { color: var(--cream); font-weight: 600; }
+
+    .pricakuj-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 3rem;
+    }
+    .pricakuj-item {
+      background: var(--bg);
+      padding: 2rem 2.5rem;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+      transition: background .25s;
+    }
+    .pricakuj-item:hover { background: rgba(196,113,74,.04); }
+    .pricakuj-check {
+      font-family: var(--ff-disp);
+      font-size: 1.5rem; font-weight: 300;
+      color: var(--accent); flex-shrink: 0;
+      line-height: 1.3; margin-top: .1rem;
+    }
+    .pricakuj-text { }
+    .pricakuj-text-title {
+      font-size: .78rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--cream); margin-bottom: .3rem;
+    }
+    .pricakuj-text-desc {
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.5;
+    }
+
+    .pricakuj-disclaimer {
+      padding: 2rem 2.5rem;
+      border: 1px solid var(--line);
+      background: var(--bg2);
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .pricakuj-disclaimer-line {
+      width: 36px; height: 1px;
+      background: rgba(196,113,74,.4); flex-shrink: 0;
+    }
+    .pricakuj-disclaimer-text {
+      font-family: var(--ff-disp);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-style: italic; font-weight: 300;
+      color: var(--cream-dim); line-height: 1.5;
+    }
+    .pricakuj-disclaimer-text strong {
+      color: var(--cream); font-style: normal; font-weight: 400;
+    }
+
+    /* ── AI RAZDELEK ── */
+    .ai-section {
+      position: relative; z-index: 1;
+      background: var(--bg3);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .ai-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 7rem 3.5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 7rem; align-items: center;
+    }
+    .ai-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-weight: 300; line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .ai-headline em { font-style: italic; color: var(--accent); }
+    .ai-desc {
+      font-size: .9rem; color: var(--cream-dim); line-height: 1.9;
+    }
+    .ai-desc strong { color: var(--cream); font-weight: 600; }
+    .ai-features {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .ai-feature {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-bottom: none;
+      padding: 1.4rem 1.8rem;
+      display: flex; align-items: center; gap: 1.2rem;
+      font-family: var(--ff-disp);
+      font-size: .95rem; font-style: italic; font-weight: 300;
+      color: var(--cream-dim);
+      transition: background .2s, color .2s;
+    }
+    .ai-feature:last-child { border-bottom: 1px solid var(--line); }
+    .ai-feature:hover { background: rgba(196,113,74,.05); color: var(--cream); }
+    .ai-feature::before {
+      content: '◈';
+      color: var(--accent); flex-shrink: 0;
+      font-style: normal;
+    }
+
+    /* ── FINAL CTA ── */
+    .finalcta {
+      position: relative; z-index: 1;
+      background: var(--accent);
+      overflow: hidden;
+    }
+    .finalcta::before {
+      content: 'NASTOP';
+      position: absolute;
+      font-family: var(--ff-disp);
+      font-size: clamp(8rem, 20vw, 24rem);
+      font-weight: 300;
+      color: rgba(0,0,0,.07);
+      bottom: -2rem; right: -2rem;
+      pointer-events: none; user-select: none;
+      letter-spacing: -.04em; line-height: 1;
+    }
+    .finalcta-inner {
+      max-width: 1340px; margin: 0 auto;
+      padding: 8rem 3.5rem;
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .finalcta-tag {
+      font-size: .63rem; font-weight: 700;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: rgba(12,11,9,.45); margin-bottom: 1.5rem;
+    }
+    .finalcta-headline {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.8rem, 5.5vw, 6rem);
+      font-weight: 300; line-height: .95;
+      color: var(--bg); margin-bottom: 1.5rem;
+    }
+    .finalcta-headline em { font-style: italic; }
+    .finalcta-sub {
+      font-size: .9rem; color: rgba(12,11,9,.65);
+      line-height: 1.85; max-width: 42ch;
+    }
+    .finalcta-right {
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 1.5rem;
+    }
+    .finalcta-option {
+      background: rgba(0,0,0,.1);
+      padding: 2rem 2rem;
+      display: flex; align-items: center; gap: 1.5rem;
+      text-decoration: none; color: inherit;
+      transition: background .2s;
+    }
+    .finalcta-option:hover { background: rgba(0,0,0,.16); }
+    .finalcta-option-icon {
+      font-family: var(--ff-disp);
+      font-size: 2rem; font-weight: 300; font-style: italic;
+      color: rgba(12,11,9,.25); flex-shrink: 0;
+    }
+    .finalcta-option-title {
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(12,11,9,.8); margin-bottom: .2rem;
+    }
+    .finalcta-option-desc {
+      font-size: .78rem; color: rgba(12,11,9,.55);
+    }
+    .finalcta-main-btn {
+      display: inline-block;
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase;
+      color: var(--accent); background: var(--bg);
+      text-decoration: none;
+      padding: 1rem 2.5rem; border-radius: 2px;
+      transition: background .2s;
+      align-self: flex-start;
+      margin-top: .5rem;
+    }
+    .finalcta-main-btn:hover { background: rgba(12,11,9,.85); }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--line);
+      padding: 3rem 3.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: var(--ff-disp);
+      font-size: .95rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--cream-dim);
+    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cream-xs); text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--cream-dim); }
+    .footer-copy { font-size: .62rem; color: rgba(90,85,78,.5); letter-spacing: .1em; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .rd1 { transition-delay: .1s; }
+    .rd2 { transition-delay: .2s; }
+    .rd3 { transition-delay: .3s; }
+    .rd4 { transition-delay: .4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 1.2rem 1.8rem; }
+      .nav-links { display: none; }
+      .breadcrumb { padding: 7rem 1.8rem 0; }
+      .hero { padding: 3rem 1.8rem 0; min-height: unset; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 4rem; }
+      .statsbar-inner { grid-template-columns: 1fr 1fr; padding: 0 1.8rem; }
+      .stat { padding-left: 1.5rem; }
+      .stat:first-child { padding-left: 1.5rem; }
+      .kajje-inner, .komu-inner, .kako-inner, .oblike-inner,
+      .pricakuj-inner, .ai-inner, .finalcta-inner,
+      .program-structure-inner { padding: 5rem 1.8rem; }
+      .kajje-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .kajje-headline { position: static; }
+      .komu-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .program-structure-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .program-structure-headline { position: static; }
+      .program-structure-grid { grid-template-columns: 1fr; }
+      .kako-header, .oblike-header, .pricakuj-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+      .kako-steps { grid-template-columns: 1fr 1fr; }
+      .oblike-grid { grid-template-columns: 1fr; }
+      .pricakuj-grid { grid-template-columns: 1fr; }
+      .ai-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .finalcta-inner { grid-template-columns: 1fr; gap: 3rem; }
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 1.8rem; }
+    }
+    @media (max-width: 560px) {
+      .statsbar-inner { grid-template-columns: 1fr 1fr; }
+      .kako-steps { grid-template-columns: 1fr; }
+      .komu-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="site-nav">
+  <a href="../index.html" class="nav-logo">Marko <span>Ujc</span></a>
+  <ul class="nav-links">
+    <li><a href="../trema/index.html">Trema</a></li>
+    <li><a href="../strenirkaj-nastop/index.html" class="active">sTRENIRkAJ</a></li>
+    <li><a href="../uprizoritev/index.html">Uprizoritev</a></li>
+    <li><a href="../o-marku/index.html">O Marku</a></li>
+    <li><a href="../zapisi/index.html">Zapisi</a></li>
+  </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
+  <a href="../kontakt/index.html" class="nav-cta">Kontakt</a>
+</nav>
+
+<!-- MOBILNI MENI – se odpre ob kliku hamburgerja -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="../trema/index.html">Trema</a>
+  <a href="../strenirkaj-nastop/index.html">sTRENIRkAJ NASTOP</a>
+  <a href="../uprizoritev/index.html">Uprizoritev</a>
+  <a href="../o-marku/index.html">O Marku</a>
+  <a href="../zapisi/index.html">Zapisi</a>
+  <a href="../kontakt/index.html">Kontakt</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../index.html">markoujc.com</a>
+  <span class="breadcrumb-sep">·</span>
+  <span class="breadcrumb-current">sTRENIRkAJ NASTOP</span>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-word" aria-hidden="true">NASTOP</div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">sTRENIRkAJ NASTOP</p>
+      <h1 class="hero-h1">
+        sTRENIRkAJ
+        <em class="small">NASTOP</em>
+      </h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-intro">Trema ne izgine. Lahko pa prideš do točke, ko te ne ustavi več.</p>
+      <p class="hero-body">8-tedenski praktični program za delo s tremo skozi telo, glas, pozornost in realne situacije.</p>
+      <div class="hero-actions">
+        <a href="../kontakt/index.html" class="btn-primary">Preveri, ali je program zate</a>
+        <a href="#oblike" class="btn-ghost">Oblike sodelovanja</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<div class="statsbar">
+  <div class="statsbar-inner">
+    <div class="stat">
+      <div class="stat-num">8</div>
+      <div class="stat-label">Tednov</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">Skupaj</div>
+      <div class="stat-label">Delo v skupini</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1 : 1</div>
+      <div class="stat-label">Individualna pozornost</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">Praksa</div>
+      <div class="stat-label">Pred teorijo</div>
+    </div>
+  </div>
+</div>
+
+<!-- KAJ JE TO -->
+<section>
+  <div class="kajje-inner">
+    <div>
+      <p class="section-label reveal">Kaj je to</p>
+      <h2 class="kajje-headline reveal rd1">To ni<br><em>tečaj.</em><br>Je trening.</h2>
+    </div>
+    <div class="kajje-right">
+      <p class="kajje-opening reveal">Večina ljudi misli, da je problem v samozavesti. Ponavadi ni.</p>
+      <ul class="kajje-distinctions reveal rd1">
+        <li class="kajje-dist">
+          <span class="kajje-dist-no">ni motivacijski seminar</span>
+          <span class="kajje-dist-yes">gledališka praksa</span>
+        </li>
+        <li class="kajje-dist">
+          <span class="kajje-dist-no">ni prezentacijski trening s slajdi</span>
+          <span class="kajje-dist-yes">improvizacija</span>
+        </li>
+        <li class="kajje-dist">
+          <span class="kajje-dist-no">ni recept za samozavest</span>
+          <span class="kajje-dist-yes">klovnovske tehnike</span>
+        </li>
+        <li class="kajje-dist">
+          <span class="kajje-dist-no">ni en trik za odpravo treme</span>
+          <span class="kajje-dist-yes">delo s pozornostjo in prisotnostjo</span>
+        </li>
+      </ul>
+      <p class="kajje-body reveal rd2">
+        <strong>Cilj ni, da postaneš popoln govorec.</strong> Cilj je, da lahko ostaneš prisoten, tudi ko ti ni udobno.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- KOMU JE NAMENJENO -->
+<section class="komu">
+  <div class="komu-inner">
+    <div>
+      <p class="section-label reveal">Komu je namenjeno</p>
+      <h2 class="komu-headline reveal rd1">Za tiste,<br>ki jih <em>blokira</em><br>trema.</h2>
+      <p class="komu-desc reveal rd2">Pod pritiskom telo in glas pogosto nista več usklajena. Misli gredo naprej, dih zaostane, glas izgubi oporo, pozornost se zoži. Tega se ne reši samo z nasveti. Potrebna je izkušnja.</p>
+    </div>
+    <div class="komu-grid reveal rd1">
+      <div class="komu-card">
+        <div class="komu-card-title">ljudje s tremo</div>
+        <div class="komu-card-desc">Za ljudi, ki želijo bolj jasno stati pred drugimi, tudi kadar se pojavi trema.</div>
+      </div>
+      <div class="komu-card">
+        <div class="komu-card-title">podjetniki in vodje</div>
+        <div class="komu-card-desc">Za ljudi, ki želijo bolj jasno stati pred drugimi, tudi kadar se pojavi trema.</div>
+      </div>
+      <div class="komu-card">
+        <div class="komu-card-title">govorci in predavatelji</div>
+        <div class="komu-card-desc">Za ljudi, ki želijo bolj jasno stati pred drugimi, tudi kadar se pojavi trema.</div>
+      </div>
+      <div class="komu-card">
+        <div class="komu-card-title">ustvarjalci in performerji</div>
+        <div class="komu-card-desc">Za ljudi, ki želijo bolj jasno stati pred drugimi, tudi kadar se pojavi trema.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KAKO DELAMO -->
+<section class="kako">
+  <div class="kako-inner">
+    <div class="kako-header">
+      <div>
+        <p class="section-label reveal">Kako delamo</p>
+        <h2 class="kako-headline reveal rd1">Oder je<br><em>laboratorij.</em></h2>
+      </div>
+      <p class="kako-intro reveal rd2">
+        Vsaka ura je praksa. <strong>Teorija pride šele potem, ko jo imaš za kaj.</strong> Ne obratno.
+      </p>
+    </div>
+
+    <div class="kako-steps">
+      <div class="kako-step reveal">
+        <div class="kako-step-num">1.</div>
+        <div class="kako-step-name">Stopiš pred druge</div>
+        <p class="kako-step-desc">Od prve ure. Brez pripravljalnega filma.</p>
+      </div>
+      <div class="kako-step reveal rd1">
+        <div class="kako-step-num">2.</div>
+        <div class="kako-step-name">Delaš napake</div>
+        <p class="kako-step-desc">Zavestno. V varnem prostoru. To je del metode.</p>
+      </div>
+      <div class="kako-step reveal rd2">
+        <div class="kako-step-num">3.</div>
+        <div class="kako-step-name">Ponavljaš situacije</div>
+        <p class="kako-step-desc">Telo se uči skozi ponavljanje — ne skozi razumevanje.</p>
+      </div>
+      <div class="kako-step reveal rd3">
+        <div class="kako-step-num">4.</div>
+        <div class="kako-step-name">Dobiš feedback</div>
+        <p class="kako-step-desc">Konkreten, neposreden, iz prakse — ne iz priročnika.</p>
+      </div>
+      <div class="kako-step reveal rd4">
+        <div class="kako-step-num">5.</div>
+        <div class="kako-step-name">Greš nazaj</div>
+        <p class="kako-step-desc">In narediš znova. Drugače. Bolje. To je trening.</p>
+      </div>
+    </div>
+
+    <div class="kako-note reveal rd2">
+      <div class="kako-note-line"></div>
+      <p class="kako-note-text">Brez teorije, ki je ne uporabiš. <strong>Samo kar ostane v telesu.</strong></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CMS:PROGRAM_STRUCTURE:START -->
+
+<section class="program-structure">
+  <div class="program-structure-inner">
+    <div>
+      <p class="section-label reveal">Struktura programa</p>
+      <h2 class="program-structure-headline reveal rd1">8 tednov.<br><em>Trening, praksa, ponovitev.</em></h2>
+    </div>
+    <div class="program-structure-grid">
+      
+      <div class="program-structure-card reveal rd1">
+        <div class="program-structure-weeks">Tedna 1-2</div>
+        <h3>Izpostavljanje</h3>
+        <ul>
+          <li>vstop pred druge</li>
+          <li>osnovna prisotnost</li>
+          <li>srečanje z nelagodjem</li>
+        </ul>
+      </div>
+      <div class="program-structure-card reveal rd2">
+        <div class="program-structure-weeks">Tedna 3-4</div>
+        <h3>Zavedanje</h3>
+        <ul>
+          <li>telesni odzivi</li>
+          <li>glas</li>
+          <li>pozornost</li>
+        </ul>
+      </div>
+      <div class="program-structure-card reveal rd3">
+        <div class="program-structure-weeks">Tedna 5-6</div>
+        <h3>Izraz</h3>
+        <ul>
+          <li>jasen govor</li>
+          <li>čustveni razpon</li>
+          <li>avtentičnost</li>
+        </ul>
+      </div>
+      <div class="program-structure-card reveal rd4">
+        <div class="program-structure-weeks">Tedna 7-8</div>
+        <h3>Integracija</h3>
+        <ul>
+          <li>realni scenariji</li>
+          <li>individualni feedback</li>
+          <li>ponovitev pod pritiskom</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CMS:PROGRAM_STRUCTURE:END -->
+
+<!-- OBLIKE SODELOVANJA -->
+<section class="oblike" id="oblike">
+  <div class="oblike-inner">
+    <div class="oblike-header">
+      <div>
+        <p class="section-label reveal">Oblike sodelovanja</p>
+        <h2 class="oblike-headline reveal rd1">Vstopi,<br>kot ti <em>ustreza.</em></h2>
+      </div>
+      <p class="oblike-intro reveal rd2">Trening je mogoč v različnih oblikah — vsaka ima svojo logiko in intenzivnost.</p>
+    </div>
+
+    <div class="oblike-grid">
+      <a href="../kontakt/index.html" class="oblike-card reveal">
+        <div class="oblike-card-icon">◎</div>
+        <div class="oblike-card-title">Skupinski program</div>
+        <p class="oblike-card-desc">Osemtedenski program v skupini. Procesno delo, skupinska dinamika, varni prostor za napako.</p>
+        <div class="oblike-card-link">Izvedi več →</div>
+      </a>
+      <a href="../kontakt/index.html" class="oblike-card reveal rd1">
+        <div class="oblike-card-icon">I.</div>
+        <div class="oblike-card-title">Individualno delo</div>
+        <p class="oblike-card-desc">1 : 1 praksa. Tempo, fokus in pristop prilagojen tebi — tvojemu profilu in ciljem.</p>
+        <div class="oblike-card-link">Izvedi več →</div>
+      </a>
+      <a href="../kontakt/index.html" class="oblike-card reveal rd2">
+        <div class="oblike-card-icon">∞</div>
+        <div class="oblike-card-title">Podjetja in ekipe</div>
+        <p class="oblike-card-desc">Delavnice, intenzivi, dolgoročna partnerstva. Za ekipe, ki nastopajo skupaj.</p>
+        <div class="oblike-card-link">Izvedi več →</div>
+      </a>
+    </div>
+
+    <div class="oblike-cta reveal rd2">
+      <p class="oblike-cta-text">Nisi prepričan, katera oblika ti ustreza?<br>Napiši — skupaj ugotoviva.</p>
+      <a href="../kontakt/index.html" class="btn-primary">Pošlji povpraševanje</a>
+    </div>
+  </div>
+</section>
+
+<!-- KAJ PRIČAKOVATI -->
+<section class="pricakuj">
+  <div class="pricakuj-inner">
+    <div class="pricakuj-header">
+      <div>
+        <p class="section-label reveal">Kaj lahko pričakuješ</p>
+        <h2 class="pricakuj-headline reveal rd1">Ne <em>popolnost.</em><br>Funkcionalnost.</h2>
+      </div>
+      <p class="pricakuj-intro reveal rd2">
+        Cilj ni nastopati brez treme. Cilj je <strong>nastopati — tudi ko je trema.</strong> To je funkcionalen nastop.
+      </p>
+    </div>
+
+    <div class="pricakuj-grid">
+      <div class="pricakuj-item reveal">
+        <span class="pricakuj-check">→</span>
+        <div class="pricakuj-text">
+          <div class="pricakuj-text-title">Večja stabilnost</div>
+          <div class="pricakuj-text-desc">Pred ljudmi. V situacijah, ki so bile prej nedostopne.</div>
+        </div>
+      </div>
+      <div class="pricakuj-item reveal rd1">
+        <span class="pricakuj-check">→</span>
+        <div class="pricakuj-text">
+          <div class="pricakuj-text-title">Jasnejši izraz</div>
+          <div class="pricakuj-text-desc">Kar misliš, prideš povedati. Brez izgube v blokadi.</div>
+        </div>
+      </div>
+      <div class="pricakuj-item reveal rd1">
+        <span class="pricakuj-check">→</span>
+        <div class="pricakuj-text">
+          <div class="pricakuj-text-title">Manj blokad</div>
+          <div class="pricakuj-text-desc">Telo ve, kaj delati. Ker je to že naredilo — večkrat.</div>
+        </div>
+      </div>
+      <div class="pricakuj-item reveal rd2">
+        <span class="pricakuj-check">→</span>
+        <div class="pricakuj-text">
+          <div class="pricakuj-text-title">Več prisotnosti</div>
+          <div class="pricakuj-text-desc">Na odru, v sobi, pred kamero. Prisotnost, ki jo čutijo drugi.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricakuj-disclaimer reveal rd2">
+      <div class="pricakuj-disclaimer-line"></div>
+      <p class="pricakuj-disclaimer-text">To ni <strong>hitra rešitev</strong> — je proces. Tisti, ki zdrži, ker je zgrajen iz prakse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI RAZDELEK -->
+<section class="ai-section">
+  <div class="ai-inner">
+    <div>
+      <p class="section-label reveal">Razvojna vizija</p>
+      <h2 class="ai-headline reveal rd1"><em>AI</em> kot orodje —<br>ne nadomestek<br>človeka.</h2>
+      <p class="ai-desc reveal rd2">
+        Program se razvija. <strong>AI-podprta orodja bodo del procesa</strong> — ne namesto dela z ljudmi, ampak ob njem. Pomoč pri strukturi, zaznavi vzorcev, povratni informaciji.
+      </p>
+    </div>
+    <ul class="ai-features reveal rd1">
+      <li class="ai-feature">Pomoč pri strukturi nastopa</li>
+      <li class="ai-feature">Zaznava vzorcev v govoru in ritmu</li>
+      <li class="ai-feature">Podpora med udeleženci</li>
+      <li class="ai-feature">Materiali, prilagojeni posamezniku</li>
+      <li class="ai-feature">AI kot orodje — fokus ostaja na človeku</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finalcta">
+  <div class="finalcta-inner">
+    <div>
+      <p class="finalcta-tag">Začni</p>
+      <h2 class="finalcta-headline reveal">Stopiš<br>pred <em>druge.</em></h2>
+      <p class="finalcta-sub reveal rd1">Napiši. Povej, kje si zdaj in kaj iščeš. Skupaj ugotoviva, katera oblika dela ti ustreza.</p>
+    </div>
+    <div class="finalcta-right reveal rd1">
+      <a href="../kontakt/index.html" class="finalcta-option">
+        <span class="finalcta-option-icon">✉</span>
+        <div>
+          <div class="finalcta-option-title">Pošlji povpraševanje</div>
+          <div class="finalcta-option-desc">Za program, individualno ali delavnico</div>
+        </div>
+      </a>
+      <a href="../trema/index.html" class="finalcta-option">
+        <span class="finalcta-option-icon">←</span>
+        <div>
+          <div class="finalcta-option-title">Nazaj na Tremo</div>
+          <div class="finalcta-option-desc">Če iščeš razumevanje pred odločitvijo</div>
+        </div>
+      </a>
+      <a href="../kontakt/index.html" class="finalcta-main-btn">Pridruži se programu →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Marko Ujc</div>
+  <ul class="footer-links">
+    <li><a href="../pravno/pogoji.html">Pogoji</a></li>
+    <li><a href="../pravno/zasebnost.html">Zasebnost</a></li>
+    <li><a href="../pravno/piskotki.html">Piškotki</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 markoujc.com</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
